@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>카테고리 Part</title>
+	<link href="css/category.css" type="text/css" rel="stylesheet"/>
+	<link rel="stylesheet" href="../css/common.css" type="text/css"/>
+	<link rel="stylesheet" href="../css/reset.css" type="text/css"/>
+	<script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+	<script>
+	$(document).ready(function(){		
+		$('#stype').change(function() {
+			var state = $('#stype option:selected').val();
+			if ( state == 'vtype01' ) {
+				$(".type01").css("display","block");
+				$(".type02").css("display","none");
+				$(".type03").css("display","none");
+				$(".type04").css("display","none");
+			} else if(state == 'vtype02'){
+				$(".type01").css("display","none");
+				$(".type02").css("display","block");
+				$(".type03").css("display","none");
+				$(".type04").css("display","none");
+			} else if(state == 'vtype03'){
+				$(".type01").css("display","none");
+				$(".type02").css("display","none");
+				$(".type03").css("display","block");
+				$(".type04").css("display","none");
+			} else{
+				$(".type01").css("display","none");
+				$(".type02").css("display","none");
+				$(".type03").css("display","none");
+				$(".type04").css("display","block");
+			} 
+		});
+	});
+	</script>
+</head>
+
+<body>
+
+	<div class="stypediv">
+		<h1>게시판 버튼 Part</h1>
+		타입을 선택해주세요
+		<select name="stype" id="stype">
+		  <option value="vtype01" selected="selected">Type01</option>
+		  <option value="vtype02">Type02</option>
+		  <option value="vtype03">Type03</option>
+		  <option value="vtype04">Type04</option>
+		</select>
+	</div>
+
+	<div class="type01">              
+		<div class="category-box  mobile-hide">
+			<ul class="tab-cate01 row05">
+				<li class="active"><a href="#a">전체</a></li>
+				<li><a href="#a">전임교수</a></li>
+				<li><a href="#a">겸임교수</a></li>
+				<li><a href="#a">명예교수</a></li>
+				<li><a href="#a">강사진</a></li>
+			</ul>                  
+		</div> 
+		<div class="b-category-m pc-hide">
+			<label for="category-op">전체</label>
+			<select class="sel-category" id="category-op">
+				<option selected="selected" value="#n">전체</option>
+				<option value="#n">전임교수</option>
+				<option value="#n">겸임교수</option>
+				<option value="#n">명예교수</option>
+				<option value="#n">강사진</option>
+			</select>
+		</div>
+	</div>
+	<br/>
+	
+	<div class="type02">              
+		<div class="category-box  mobile-hide">
+			<ul class="tab-cate01 row05">
+				<li class="active"><a href="#a">전체</a></li>
+				<li><a href="#a">전임교수</a></li>
+				<li><a href="#a">겸임교수</a></li>
+				<li><a href="#a">명예교수</a></li>
+				<li><a href="#a">강사진</a></li>
+			</ul>                  
+		</div> 
+		<div class="b-category-m pc-hide">
+			<label for="category-op">전체</label>
+			<select class="sel-category" id="category-op">
+				<option selected="selected" value="#n">전체</option>
+				<option value="#n">전임교수</option>
+				<option value="#n">겸임교수</option>
+				<option value="#n">명예교수</option>
+				<option value="#n">강사진</option>
+			</select>
+		</div>
+	</div>
+	<br/>
+	
+	<div class="type03">              
+		<div class="category-box  mobile-hide">
+			<ul class="tab-cate01 row05">
+				<li class="active"><a href="#a">전체</a></li>
+				<li><a href="#a">전임교수</a></li>
+				<li><a href="#a">겸임교수</a></li>
+				<li><a href="#a">명예교수</a></li>
+				<li><a href="#a">강사진</a></li>
+			</ul>                  
+		</div> 
+		<div class="b-category-m pc-hide">
+			<label for="category-op">전체</label>
+			<select class="sel-category" id="category-op">
+				<option selected="selected" value="#n">전체</option>
+				<option value="#n">전임교수</option>
+				<option value="#n">겸임교수</option>
+				<option value="#n">명예교수</option>
+				<option value="#n">강사진</option>
+			</select>
+		</div>
+	</div>
+	<br/>
+	
+	<div class="type04">              
+		<div class="category-box  mobile-hide">
+			<ul class="tab-cate01 row05">
+				<li class="active"><a href="#a">전체</a></li>
+				<li><a href="#a">전임교수</a></li>
+				<li><a href="#a">겸임교수</a></li>
+				<li><a href="#a">명예교수</a></li>
+				<li><a href="#a">강사진</a></li>
+			</ul>                  
+		</div> 
+		<div class="b-category-m pc-hide">
+			<label for="category-op">전체</label>
+			<select class="sel-category" id="category-op">
+				<option selected="selected" value="#n">전체</option>
+				<option value="#n">전임교수</option>
+				<option value="#n">겸임교수</option>
+				<option value="#n">명예교수</option>
+				<option value="#n">강사진</option>
+			</select>
+		</div>
+	</div>
+	<br/>
+
+	<div class="backbutton">
+		<ul class="btn-wrap">	
+			<li><a href="../../index.html">목록으로 돌아가기</a></li>              
+		</ul>
+	</div>
+</body>
+</html>

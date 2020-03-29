@@ -1,0 +1,870 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>무제 문서</title>
+	<link rel="stylesheet" type="text/css" href="css/list.css"/>
+	<link rel="stylesheet" href="../css/common.css" type="text/css"/>
+	<link rel="stylesheet" href="../css/reset.css" type="text/css"/>
+	<script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+	<script>
+	$(document).ready(function(){		
+		$('#stype').change(function() {
+			var state = $('#stype option:selected').val();
+			if ( state == 'vtype01' ) {
+				$(".type01").css("display","block");
+				$(".type02").css("display","none");
+				$(".type03").css("display","none");
+				$(".type04").css("display","none");
+				$(".type05").css("display","none");
+			} else if(state == 'vtype02'){
+				$(".type01").css("display","none");
+				$(".type02").css("display","block");
+				$(".type03").css("display","none");
+				$(".type04").css("display","none");
+				$(".type05").css("display","none");
+			} else if(state == 'vtype03'){
+				$(".type01").css("display","none");
+				$(".type02").css("display","none");
+				$(".type03").css("display","block");
+				$(".type04").css("display","none");
+				$(".type05").css("display","none");
+			} else if(state == 'vtype04'){
+				$(".type01").css("display","none");
+				$(".type02").css("display","none");
+				$(".type03").css("display","none");
+				$(".type04").css("display","block");
+				$(".type05").css("display","none");
+			}else{
+				$(".type01").css("display","none");
+				$(".type02").css("display","none");
+				$(".type03").css("display","none");
+				$(".type04").css("display","none");
+				$(".type05").css("display","block");
+			} 
+		});
+	});
+	</script>
+</head>
+
+<body>
+
+	<div class="stypediv">
+		<h1>썸네일 게시판 목록 Part</h1>
+		타입을 선택해주세요
+		<select name="stype" id="stype">
+		  <option value="vtype01" selected="selected">Type01</option>
+		  <option value="vtype02">Type02</option>
+		  <option value="vtype03">Type03</option>
+		  <option value="vtype04">Type04</option>
+		  <option value="vtype05">Type05</option>
+		</select>
+    </div>
+
+    <div class="type01">
+        <ul>
+            <li>
+                <span class="article-chk"><label for="b-chk01" class="hide"></label><input id="b-chk01" type="checkbox" /></span>
+                <div class="b-box01">
+                    <div class="b-num-box">6</div>
+                    <div class="b-img-box"><a href="#a" title=""><img src="img/img-thumbnail01.gif" alt="" /></a></div>
+                </div>
+                <div class="b-box02">
+                    <div class="b-title-box">
+                        <a href="#a"><span class="b-cate">[카테고리]</span>썸네일게시판 테스트제목</a>
+                        <span class="b-new"><span class="hide">새 글</span></span>
+                    </div>
+                    <div class="b-text-box"><a href="#a">썸네일게시판 테스트내용</a></div>
+                    <ul class="b-info-box">
+                        <li class="b-num">No.6</li>
+                        <li class="b-writer"><span>작성자</span>작성자</li>
+                        <li class="b-date"><span>작성일</span>2020</li>
+                        <li class="b-hit"><span>조회수</span>2043</li>
+                    </ul>
+                    <ul class="b-sns-box">
+                        <li><a href="#a" title="카카오톡 공유하기"><img src="img/ico-sns01.png" alt="카카오톡" /></a></li>
+                        <li><a href="#a" title="네이버 블로그 공유하기"><img src="img/ico-sns02.png" alt="네이버 블로그" /></a></li>
+                        <li><a href="#a" title="인스타그램 공유하기"><img src="img/ico-sns03.png" alt="인스타그램" /></a></li>
+                    </ul>
+                </div>
+                <div class="b-box03"><a href="#a" title="첨부파일 다운로드"><img src="img/ico-file01.gif" alt="첨부파일" /></a></div>
+            </li>
+            <li>
+                <span class="article-chk"><label for="b-chk02" class="hide"></label><input id="b-chk02" type="checkbox" /></span>
+                <div class="b-box01">
+                    <div class="b-num-box">5</div>
+                    <div class="b-img-box"><a href="#a" title=""><img src="img/img-thumbnail02.gif" alt="" /></a></div>
+                </div>
+                <div class="b-box02">
+                    <div class="b-title-box">
+                        <a href="#a"><span class="b-cate">[카테고리]</span>썸네일게시판 테스트제목</a>
+                        <span class="b-new"><span class="hide">새 글</span></span>
+                    </div>
+                    <div class="b-text-box"><a href="#a">썸네일게시판 테스트내용</a></div>
+                    <ul class="b-info-box">
+                        <li class="b-num">No.5</li>
+                        <li class="b-writer"><span>작성자</span>작성자</li>
+                        <li class="b-date"><span>작성일</span>2020</li>
+                        <li class="b-hit"><span>조회수</span>2043</li>
+                    </ul>
+                    <ul class="b-sns-box">
+                        <li><a href="#a" title="카카오톡 공유하기"><img src="img/ico-sns01.png" alt="카카오톡" /></a></li>
+                        <li><a href="#a" title="네이버 블로그 공유하기"><img src="img/ico-sns02.png" alt="네이버 블로그" /></a></li>
+                        <li><a href="#a" title="인스타그램 공유하기"><img src="img/ico-sns03.png" alt="인스타그램" /></a></li>
+                    </ul>
+                </div>
+                <div class="b-box03"><a href="#a" title="첨부파일 다운로드"><img src="img/ico-file01.gif" alt="첨부파일" /></a></div>
+            </li>
+            <li>
+                <span class="article-chk"><label for="b-chk03" class="hide"></label><input id="b-chk03" type="checkbox" /></span>
+                <div class="b-box01">
+                    <div class="b-num-box">4</div>
+                    <div class="b-img-box"><a href="#a" title=""><img src="img/img-thumbnail03.gif" alt="" /></a></div>
+                </div>
+                <div class="b-box02">
+                    <div class="b-title-box">
+                        <a href="#a"><span class="b-cate">[카테고리]</span>썸네일게시판 테스트제목</a>
+                        <span class="b-new"><span class="hide">새 글</span></span>
+                    </div>
+                    <div class="b-text-box"><a href="#a">썸네일게시판 테스트내용</a></div>
+                    <ul class="b-info-box">
+                        <li class="b-num">No.4</li>
+                        <li class="b-writer"><span>작성자</span>작성자</li>
+                        <li class="b-date"><span>작성일</span>2020</li>
+                        <li class="b-hit"><span>조회수</span>2043</li>
+                    </ul>
+                    <ul class="b-sns-box">
+                        <li><a href="#a" title="카카오톡 공유하기"><img src="img/ico-sns01.png" alt="카카오톡" /></a></li>
+                        <li><a href="#a" title="네이버 블로그 공유하기"><img src="img/ico-sns02.png" alt="네이버 블로그" /></a></li>
+                        <li><a href="#a" title="인스타그램 공유하기"><img src="img/ico-sns03.png" alt="인스타그램" /></a></li>
+                    </ul>
+                </div>
+                <div class="b-box03"><a href="#a" title="첨부파일 다운로드"><img src="img/ico-file01.gif" alt="첨부파일" /></a></div>
+            </li>
+            <li>
+                <span class="article-chk"><label for="b-chk04" class="hide"></label><input id="b-chk04" type="checkbox" /></span>
+                <div class="b-box01">
+                    <div class="b-num-box">3</div>
+                    <div class="b-img-box"><a href="#a" title=""><img src="img/img-thumbnail04.gif" alt="" /></a></div>
+                </div>
+                <div class="b-box02">
+                    <div class="b-title-box">
+                        <a href="#a"><span class="b-cate">[카테고리]</span>썸네일게시판 테스트제목</a>
+                        <span class="b-new"><span class="hide">새 글</span></span>
+                    </div>
+                    <div class="b-text-box"><a href="#a">썸네일게시판 테스트내용</a></div>
+                    <ul class="b-info-box">
+                        <li class="b-num">No.3</li>
+                        <li class="b-writer"><span>작성자</span>작성자</li>
+                        <li class="b-date"><span>작성일</span>2020</li>
+                        <li class="b-hit"><span>조회수</span>2043</li>
+                    </ul>
+                    <ul class="b-sns-box">
+                        <li><a href="#a" title="카카오톡 공유하기"><img src="img/ico-sns01.png" alt="카카오톡" /></a></li>
+                        <li><a href="#a" title="네이버 블로그 공유하기"><img src="img/ico-sns02.png" alt="네이버 블로그" /></a></li>
+                        <li><a href="#a" title="인스타그램 공유하기"><img src="img/ico-sns03.png" alt="인스타그램" /></a></li>
+                    </ul>
+                </div>
+                <div class="b-box03"><a href="#a" title="첨부파일 다운로드"><img src="img/ico-file01.gif" alt="첨부파일" /></a></div>
+            </li>
+            <li>
+                <span class="article-chk"><label for="b-chk05" class="hide"></label><input id="b-chk05" type="checkbox" /></span>
+                <div class="b-box01">
+                    <div class="b-num-box">2</div>
+                    <div class="b-img-box"><a href="#a" title=""><img src="img/img-thumbnail05.gif" alt="" /></a></div>
+                </div>
+                <div class="b-box02">
+                    <div class="b-title-box">
+                        <a href="#a"><span class="b-cate">[카테고리]</span>썸네일게시판 테스트제목</a>
+                        <span class="b-new"><span class="hide">새 글</span></span>
+                    </div>
+                    <div class="b-text-box"><a href="#a">썸네일게시판 테스트내용</a></div>
+                    <ul class="b-info-box">
+                        <li class="b-num">No.2</li>
+                        <li class="b-writer"><span>작성자</span>작성자</li>
+                        <li class="b-date"><span>작성일</span>2020</li>
+                        <li class="b-hit"><span>조회수</span>2043</li>
+                    </ul>
+                    <ul class="b-sns-box">
+                        <li><a href="#a" title="카카오톡 공유하기"><img src="img/ico-sns01.png" alt="카카오톡" /></a></li>
+                        <li><a href="#a" title="네이버 블로그 공유하기"><img src="img/ico-sns02.png" alt="네이버 블로그" /></a></li>
+                        <li><a href="#a" title="인스타그램 공유하기"><img src="img/ico-sns03.png" alt="인스타그램" /></a></li>
+                    </ul>
+                </div>
+                <div class="b-box03"><a href="#a" title="첨부파일 다운로드"><img src="img/ico-file01.gif" alt="첨부파일" /></a></div>
+            </li>
+            <li>
+                <span class="article-chk"><label for="b-chk06" class="hide"></label><input id="b-chk06" type="checkbox" /></span>
+                <div class="b-box01">
+                    <div class="b-num-box">1</div>
+                    <div class="b-img-box"><a href="#a" title=""><img src="img/img-thumbnail06.gif" alt="" /></a></div>
+                </div>
+                <div class="b-box02">
+                    <div class="b-title-box">
+                        <a href="#a"><span class="b-cate">[카테고리]</span>썸네일게시판 테스트제목</a>
+                        <span class="b-new"><span class="hide">새 글</span></span>
+                    </div>
+                    <div class="b-text-box"><a href="#a">썸네일게시판 테스트내용</a></div>
+                    <ul class="b-info-box">
+                        <li class="b-num">No.1</li>
+                        <li class="b-writer"><span>작성자</span>작성자</li>
+                        <li class="b-date"><span>작성일</span>2020</li>
+                        <li class="b-hit"><span>조회수</span>2043</li>
+                    </ul>
+                    <ul class="b-sns-box">
+                        <li><a href="#a" title="카카오톡 공유하기"><img src="img/ico-sns01.png" alt="카카오톡" /></a></li>
+                        <li><a href="#a" title="네이버 블로그 공유하기"><img src="img/ico-sns02.png" alt="네이버 블로그" /></a></li>
+                        <li><a href="#a" title="인스타그램 공유하기"><img src="img/ico-sns03.png" alt="인스타그램" /></a></li>
+                    </ul>
+                </div>
+                <div class="b-box03"><a href="#a" title="첨부파일 다운로드"><img src="img/ico-file01.gif" alt="첨부파일" /></a></div>
+            </li>
+        </ul>
+    </div>
+    <div class="type02">
+        <ul>
+            <li>
+                <span class="article-chk"><label for="b-chk01" class="hide"></label><input id="b-chk01" type="checkbox" /></span>
+                <div class="b-box01">
+                    <div class="b-num-box">6</div>
+                    <div class="b-img-box"><a href="#a" title=""><img src="img/img-thumbnail01.gif" alt="" /></a></div>
+                </div>
+                <div class="b-box02">
+                    <div class="b-title-box">
+                        <a href="#a"><span class="b-cate">[카테고리]</span>썸네일게시판 테스트제목</a>
+                        <span class="b-new"><span class="hide">새 글</span></span>
+                    </div>
+                    <div class="b-text-box"><a href="#a">썸네일게시판 테스트내용</a></div>
+                    <ul class="b-info-box">
+                        <li class="b-num">No.6</li>
+                        <li class="b-writer"><span>작성자</span>작성자</li>
+                        <li class="b-date"><span>작성일</span>2020</li>
+                        <li class="b-hit"><span>조회수</span>2043</li>
+                    </ul>
+                    <ul class="b-sns-box">
+                        <li><a href="#a" title="카카오톡 공유하기"><img src="img/ico-sns01.png" alt="카카오톡" /></a></li>
+                        <li><a href="#a" title="네이버 블로그 공유하기"><img src="img/ico-sns02.png" alt="네이버 블로그" /></a></li>
+                        <li><a href="#a" title="인스타그램 공유하기"><img src="img/ico-sns03.png" alt="인스타그램" /></a></li>
+                    </ul>
+                </div>
+                <div class="b-box03"><a href="#a" title="첨부파일 다운로드"><img src="img/ico-file01.gif" alt="첨부파일" /></a></div>
+            </li>
+            <li>
+                <span class="article-chk"><label for="b-chk02" class="hide"></label><input id="b-chk02" type="checkbox" /></span>
+                <div class="b-box01">
+                    <div class="b-num-box">5</div>
+                    <div class="b-img-box"><a href="#a" title=""><img src="img/img-thumbnail02.gif" alt="" /></a></div>
+                </div>
+                <div class="b-box02">
+                    <div class="b-title-box">
+                        <a href="#a"><span class="b-cate">[카테고리]</span>썸네일게시판 테스트제목</a>
+                        <span class="b-new"><span class="hide">새 글</span></span>
+                    </div>
+                    <div class="b-text-box"><a href="#a">썸네일게시판 테스트내용</a></div>
+                    <ul class="b-info-box">
+                        <li class="b-num">No.5</li>
+                        <li class="b-writer"><span>작성자</span>작성자</li>
+                        <li class="b-date"><span>작성일</span>2020</li>
+                        <li class="b-hit"><span>조회수</span>2043</li>
+                    </ul>
+                    <ul class="b-sns-box">
+                        <li><a href="#a" title="카카오톡 공유하기"><img src="img/ico-sns01.png" alt="카카오톡" /></a></li>
+                        <li><a href="#a" title="네이버 블로그 공유하기"><img src="img/ico-sns02.png" alt="네이버 블로그" /></a></li>
+                        <li><a href="#a" title="인스타그램 공유하기"><img src="img/ico-sns03.png" alt="인스타그램" /></a></li>
+                    </ul>
+                </div>
+                <div class="b-box03"><a href="#a" title="첨부파일 다운로드"><img src="img/ico-file01.gif" alt="첨부파일" /></a></div>
+            </li>
+            <li>
+                <span class="article-chk"><label for="b-chk03" class="hide"></label><input id="b-chk03" type="checkbox" /></span>
+                <div class="b-box01">
+                    <div class="b-num-box">4</div>
+                    <div class="b-img-box"><a href="#a" title=""><img src="img/img-thumbnail03.gif" alt="" /></a></div>
+                </div>
+                <div class="b-box02">
+                    <div class="b-title-box">
+                        <a href="#a"><span class="b-cate">[카테고리]</span>썸네일게시판 테스트제목</a>
+                        <span class="b-new"><span class="hide">새 글</span></span>
+                    </div>
+                    <div class="b-text-box"><a href="#a">썸네일게시판 테스트내용</a></div>
+                    <ul class="b-info-box">
+                        <li class="b-num">No.4</li>
+                        <li class="b-writer"><span>작성자</span>작성자</li>
+                        <li class="b-date"><span>작성일</span>2020</li>
+                        <li class="b-hit"><span>조회수</span>2043</li>
+                    </ul>
+                    <ul class="b-sns-box">
+                        <li><a href="#a" title="카카오톡 공유하기"><img src="img/ico-sns01.png" alt="카카오톡" /></a></li>
+                        <li><a href="#a" title="네이버 블로그 공유하기"><img src="img/ico-sns02.png" alt="네이버 블로그" /></a></li>
+                        <li><a href="#a" title="인스타그램 공유하기"><img src="img/ico-sns03.png" alt="인스타그램" /></a></li>
+                    </ul>
+                </div>
+                <div class="b-box03"><a href="#a" title="첨부파일 다운로드"><img src="img/ico-file01.gif" alt="첨부파일" /></a></div>
+            </li>
+            <li>
+                <span class="article-chk"><label for="b-chk04" class="hide"></label><input id="b-chk04" type="checkbox" /></span>
+                <div class="b-box01">
+                    <div class="b-num-box">3</div>
+                    <div class="b-img-box"><a href="#a" title=""><img src="img/img-thumbnail04.gif" alt="" /></a></div>
+                </div>
+                <div class="b-box02">
+                    <div class="b-title-box">
+                        <a href="#a"><span class="b-cate">[카테고리]</span>썸네일게시판 테스트제목</a>
+                        <span class="b-new"><span class="hide">새 글</span></span>
+                    </div>
+                    <div class="b-text-box"><a href="#a">썸네일게시판 테스트내용</a></div>
+                    <ul class="b-info-box">
+                        <li class="b-num">No.3</li>
+                        <li class="b-writer"><span>작성자</span>작성자</li>
+                        <li class="b-date"><span>작성일</span>2020</li>
+                        <li class="b-hit"><span>조회수</span>2043</li>
+                    </ul>
+                    <ul class="b-sns-box">
+                        <li><a href="#a" title="카카오톡 공유하기"><img src="img/ico-sns01.png" alt="카카오톡" /></a></li>
+                        <li><a href="#a" title="네이버 블로그 공유하기"><img src="img/ico-sns02.png" alt="네이버 블로그" /></a></li>
+                        <li><a href="#a" title="인스타그램 공유하기"><img src="img/ico-sns03.png" alt="인스타그램" /></a></li>
+                    </ul>
+                </div>
+                <div class="b-box03"><a href="#a" title="첨부파일 다운로드"><img src="img/ico-file01.gif" alt="첨부파일" /></a></div>
+            </li>
+            <li>
+                <span class="article-chk"><label for="b-chk05" class="hide"></label><input id="b-chk05" type="checkbox" /></span>
+                <div class="b-box01">
+                    <div class="b-num-box">2</div>
+                    <div class="b-img-box"><a href="#a" title=""><img src="img/img-thumbnail05.gif" alt="" /></a></div>
+                </div>
+                <div class="b-box02">
+                    <div class="b-title-box">
+                        <a href="#a"><span class="b-cate">[카테고리]</span>썸네일게시판 테스트제목</a>
+                        <span class="b-new"><span class="hide">새 글</span></span>
+                    </div>
+                    <div class="b-text-box"><a href="#a">썸네일게시판 테스트내용</a></div>
+                    <ul class="b-info-box">
+                        <li class="b-num">No.2</li>
+                        <li class="b-writer"><span>작성자</span>작성자</li>
+                        <li class="b-date"><span>작성일</span>2020</li>
+                        <li class="b-hit"><span>조회수</span>2043</li>
+                    </ul>
+                    <ul class="b-sns-box">
+                        <li><a href="#a" title="카카오톡 공유하기"><img src="img/ico-sns01.png" alt="카카오톡" /></a></li>
+                        <li><a href="#a" title="네이버 블로그 공유하기"><img src="img/ico-sns02.png" alt="네이버 블로그" /></a></li>
+                        <li><a href="#a" title="인스타그램 공유하기"><img src="img/ico-sns03.png" alt="인스타그램" /></a></li>
+                    </ul>
+                </div>
+                <div class="b-box03"><a href="#a" title="첨부파일 다운로드"><img src="img/ico-file01.gif" alt="첨부파일" /></a></div>
+            </li>
+            <li>
+                <span class="article-chk"><label for="b-chk06" class="hide"></label><input id="b-chk06" type="checkbox" /></span>
+                <div class="b-box01">
+                    <div class="b-num-box">1</div>
+                    <div class="b-img-box"><a href="#a" title=""><img src="img/img-thumbnail06.gif" alt="" /></a></div>
+                </div>
+                <div class="b-box02">
+                    <div class="b-title-box">
+                        <a href="#a"><span class="b-cate">[카테고리]</span>썸네일게시판 테스트제목</a>
+                        <span class="b-new"><span class="hide">새 글</span></span>
+                    </div>
+                    <div class="b-text-box"><a href="#a">썸네일게시판 테스트내용</a></div>
+                    <ul class="b-info-box">
+                        <li class="b-num">No.1</li>
+                        <li class="b-writer"><span>작성자</span>작성자</li>
+                        <li class="b-date"><span>작성일</span>2020</li>
+                        <li class="b-hit"><span>조회수</span>2043</li>
+                    </ul>
+                    <ul class="b-sns-box">
+                        <li><a href="#a" title="카카오톡 공유하기"><img src="img/ico-sns01.png" alt="카카오톡" /></a></li>
+                        <li><a href="#a" title="네이버 블로그 공유하기"><img src="img/ico-sns02.png" alt="네이버 블로그" /></a></li>
+                        <li><a href="#a" title="인스타그램 공유하기"><img src="img/ico-sns03.png" alt="인스타그램" /></a></li>
+                    </ul>
+                </div>
+                <div class="b-box03"><a href="#a" title="첨부파일 다운로드"><img src="img/ico-file01.gif" alt="첨부파일" /></a></div>
+            </li>
+        </ul>
+    </div>
+    <div class="type03">
+        <ul>
+            <li>
+                <span class="article-chk"><label for="b-chk01" class="hide"></label><input id="b-chk01" type="checkbox" /></span>
+                <div class="b-box01">
+                    <div class="b-num-box">6</div>
+                    <div class="b-img-box"><a href="#a" title=""><img src="img/img-thumbnail01.gif" alt="" /></a></div>
+                </div>
+                <div class="b-box02">
+                    <div class="b-title-box">
+                        <a href="#a"><span class="b-cate">[카테고리]</span>썸네일게시판 테스트제목</a>
+                        <span class="b-new"><span class="hide">새 글</span></span>
+                    </div>
+                    <div class="b-text-box"><a href="#a">썸네일게시판 테스트내용</a></div>
+                    <ul class="b-info-box">
+                        <li class="b-num">No.6</li>
+                        <li class="b-writer"><span>작성자</span>작성자</li>
+                        <li class="b-date"><span>작성일</span>2020</li>
+                        <li class="b-hit"><span>조회수</span>2043</li>
+                    </ul>
+                    <ul class="b-sns-box">
+                        <li><a href="#a" title="카카오톡 공유하기"><img src="img/ico-sns01.png" alt="카카오톡" /></a></li>
+                        <li><a href="#a" title="네이버 블로그 공유하기"><img src="img/ico-sns02.png" alt="네이버 블로그" /></a></li>
+                        <li><a href="#a" title="인스타그램 공유하기"><img src="img/ico-sns03.png" alt="인스타그램" /></a></li>
+                    </ul>
+                </div>
+                <div class="b-box03"><a href="#a" title="첨부파일 다운로드"><img src="img/ico-file01.gif" alt="첨부파일" /></a></div>
+            </li>
+            <li>
+                <span class="article-chk"><label for="b-chk02" class="hide"></label><input id="b-chk02" type="checkbox" /></span>
+                <div class="b-box01">
+                    <div class="b-num-box">5</div>
+                    <div class="b-img-box"><a href="#a" title=""><img src="img/img-thumbnail02.gif" alt="" /></a></div>
+                </div>
+                <div class="b-box02">
+                    <div class="b-title-box">
+                        <a href="#a"><span class="b-cate">[카테고리]</span>썸네일게시판 테스트제목</a>
+                        <span class="b-new"><span class="hide">새 글</span></span>
+                    </div>
+                    <div class="b-text-box"><a href="#a">썸네일게시판 테스트내용</a></div>
+                    <ul class="b-info-box">
+                        <li class="b-num">No.5</li>
+                        <li class="b-writer"><span>작성자</span>작성자</li>
+                        <li class="b-date"><span>작성일</span>2020</li>
+                        <li class="b-hit"><span>조회수</span>2043</li>
+                    </ul>
+                    <ul class="b-sns-box">
+                        <li><a href="#a" title="카카오톡 공유하기"><img src="img/ico-sns01.png" alt="카카오톡" /></a></li>
+                        <li><a href="#a" title="네이버 블로그 공유하기"><img src="img/ico-sns02.png" alt="네이버 블로그" /></a></li>
+                        <li><a href="#a" title="인스타그램 공유하기"><img src="img/ico-sns03.png" alt="인스타그램" /></a></li>
+                    </ul>
+                </div>
+                <div class="b-box03"><a href="#a" title="첨부파일 다운로드"><img src="img/ico-file01.gif" alt="첨부파일" /></a></div>
+            </li>
+            <li>
+                <span class="article-chk"><label for="b-chk03" class="hide"></label><input id="b-chk03" type="checkbox" /></span>
+                <div class="b-box01">
+                    <div class="b-num-box">4</div>
+                    <div class="b-img-box"><a href="#a" title=""><img src="img/img-thumbnail03.gif" alt="" /></a></div>
+                </div>
+                <div class="b-box02">
+                    <div class="b-title-box">
+                        <a href="#a"><span class="b-cate">[카테고리]</span>썸네일게시판 테스트제목</a>
+                        <span class="b-new"><span class="hide">새 글</span></span>
+                    </div>
+                    <div class="b-text-box"><a href="#a">썸네일게시판 테스트내용</a></div>
+                    <ul class="b-info-box">
+                        <li class="b-num">No.4</li>
+                        <li class="b-writer"><span>작성자</span>작성자</li>
+                        <li class="b-date"><span>작성일</span>2020</li>
+                        <li class="b-hit"><span>조회수</span>2043</li>
+                    </ul>
+                    <ul class="b-sns-box">
+                        <li><a href="#a" title="카카오톡 공유하기"><img src="img/ico-sns01.png" alt="카카오톡" /></a></li>
+                        <li><a href="#a" title="네이버 블로그 공유하기"><img src="img/ico-sns02.png" alt="네이버 블로그" /></a></li>
+                        <li><a href="#a" title="인스타그램 공유하기"><img src="img/ico-sns03.png" alt="인스타그램" /></a></li>
+                    </ul>
+                </div>
+                <div class="b-box03"><a href="#a" title="첨부파일 다운로드"><img src="img/ico-file01.gif" alt="첨부파일" /></a></div>
+            </li>
+            <li>
+                <span class="article-chk"><label for="b-chk04" class="hide"></label><input id="b-chk04" type="checkbox" /></span>
+                <div class="b-box01">
+                    <div class="b-num-box">3</div>
+                    <div class="b-img-box"><a href="#a" title=""><img src="img/img-thumbnail04.gif" alt="" /></a></div>
+                </div>
+                <div class="b-box02">
+                    <div class="b-title-box">
+                        <a href="#a"><span class="b-cate">[카테고리]</span>썸네일게시판 테스트제목</a>
+                        <span class="b-new"><span class="hide">새 글</span></span>
+                    </div>
+                    <div class="b-text-box"><a href="#a">썸네일게시판 테스트내용</a></div>
+                    <ul class="b-info-box">
+                        <li class="b-num">No.3</li>
+                        <li class="b-writer"><span>작성자</span>작성자</li>
+                        <li class="b-date"><span>작성일</span>2020</li>
+                        <li class="b-hit"><span>조회수</span>2043</li>
+                    </ul>
+                    <ul class="b-sns-box">
+                        <li><a href="#a" title="카카오톡 공유하기"><img src="img/ico-sns01.png" alt="카카오톡" /></a></li>
+                        <li><a href="#a" title="네이버 블로그 공유하기"><img src="img/ico-sns02.png" alt="네이버 블로그" /></a></li>
+                        <li><a href="#a" title="인스타그램 공유하기"><img src="img/ico-sns03.png" alt="인스타그램" /></a></li>
+                    </ul>
+                </div>
+                <div class="b-box03"><a href="#a" title="첨부파일 다운로드"><img src="img/ico-file01.gif" alt="첨부파일" /></a></div>
+            </li>
+            <li>
+                <span class="article-chk"><label for="b-chk05" class="hide"></label><input id="b-chk05" type="checkbox" /></span>
+                <div class="b-box01">
+                    <div class="b-num-box">2</div>
+                    <div class="b-img-box"><a href="#a" title=""><img src="img/img-thumbnail05.gif" alt="" /></a></div>
+                </div>
+                <div class="b-box02">
+                    <div class="b-title-box">
+                        <a href="#a"><span class="b-cate">[카테고리]</span>썸네일게시판 테스트제목</a>
+                        <span class="b-new"><span class="hide">새 글</span></span>
+                    </div>
+                    <div class="b-text-box"><a href="#a">썸네일게시판 테스트내용</a></div>
+                    <ul class="b-info-box">
+                        <li class="b-num">No.2</li>
+                        <li class="b-writer"><span>작성자</span>작성자</li>
+                        <li class="b-date"><span>작성일</span>2020</li>
+                        <li class="b-hit"><span>조회수</span>2043</li>
+                    </ul>
+                    <ul class="b-sns-box">
+                        <li><a href="#a" title="카카오톡 공유하기"><img src="img/ico-sns01.png" alt="카카오톡" /></a></li>
+                        <li><a href="#a" title="네이버 블로그 공유하기"><img src="img/ico-sns02.png" alt="네이버 블로그" /></a></li>
+                        <li><a href="#a" title="인스타그램 공유하기"><img src="img/ico-sns03.png" alt="인스타그램" /></a></li>
+                    </ul>
+                </div>
+                <div class="b-box03"><a href="#a" title="첨부파일 다운로드"><img src="img/ico-file01.gif" alt="첨부파일" /></a></div>
+            </li>
+            <li>
+                <span class="article-chk"><label for="b-chk06" class="hide"></label><input id="b-chk06" type="checkbox" /></span>
+                <div class="b-box01">
+                    <div class="b-num-box">1</div>
+                    <div class="b-img-box"><a href="#a" title=""><img src="img/img-thumbnail06.gif" alt="" /></a></div>
+                </div>
+                <div class="b-box02">
+                    <div class="b-title-box">
+                        <a href="#a"><span class="b-cate">[카테고리]</span>썸네일게시판 테스트제목</a>
+                        <span class="b-new"><span class="hide">새 글</span></span>
+                    </div>
+                    <div class="b-text-box"><a href="#a">썸네일게시판 테스트내용</a></div>
+                    <ul class="b-info-box">
+                        <li class="b-num">No.1</li>
+                        <li class="b-writer"><span>작성자</span>작성자</li>
+                        <li class="b-date"><span>작성일</span>2020</li>
+                        <li class="b-hit"><span>조회수</span>2043</li>
+                    </ul>
+                    <ul class="b-sns-box">
+                        <li><a href="#a" title="카카오톡 공유하기"><img src="img/ico-sns01.png" alt="카카오톡" /></a></li>
+                        <li><a href="#a" title="네이버 블로그 공유하기"><img src="img/ico-sns02.png" alt="네이버 블로그" /></a></li>
+                        <li><a href="#a" title="인스타그램 공유하기"><img src="img/ico-sns03.png" alt="인스타그램" /></a></li>
+                    </ul>
+                </div>
+                <div class="b-box03"><a href="#a" title="첨부파일 다운로드"><img src="img/ico-file01.gif" alt="첨부파일" /></a></div>
+            </li>
+        </ul>
+    </div>
+    <div class="type04">
+        <ul>
+            <li>
+                <span class="article-chk"><label for="b-chk01" class="hide"></label><input id="b-chk01" type="checkbox" /></span>
+                <div class="b-box01">
+                    <div class="b-num-box">6</div>
+                    <div class="b-img-box"><a href="#a" title=""><img src="img/img-thumbnail01.gif" alt="" /></a></div>
+                </div>
+                <div class="b-box02">
+                    <div class="b-title-box">
+                        <a href="#a"><span class="b-cate">[카테고리]</span>썸네일게시판 테스트제목</a>
+                        <span class="b-new"><span class="hide">새 글</span></span>
+                    </div>
+                    <div class="b-text-box"><a href="#a">썸네일게시판 테스트내용</a></div>
+                    <ul class="b-info-box">
+                        <li class="b-num">No.6</li>
+                        <li class="b-writer"><span>작성자</span>작성자</li>
+                        <li class="b-date"><span>작성일</span>2020</li>
+                        <li class="b-hit"><span>조회수</span>2043</li>
+                    </ul>
+                    <ul class="b-sns-box">
+                        <li><a href="#a" title="카카오톡 공유하기"><img src="img/ico-sns01.png" alt="카카오톡" /></a></li>
+                        <li><a href="#a" title="네이버 블로그 공유하기"><img src="img/ico-sns02.png" alt="네이버 블로그" /></a></li>
+                        <li><a href="#a" title="인스타그램 공유하기"><img src="img/ico-sns03.png" alt="인스타그램" /></a></li>
+                    </ul>
+                </div>
+                <div class="b-box03"><a href="#a" title="첨부파일 다운로드"><img src="img/ico-file01.gif" alt="첨부파일" /></a></div>
+            </li>
+            <li>
+                <span class="article-chk"><label for="b-chk02" class="hide"></label><input id="b-chk02" type="checkbox" /></span>
+                <div class="b-box01">
+                    <div class="b-num-box">5</div>
+                    <div class="b-img-box"><a href="#a" title=""><img src="img/img-thumbnail02.gif" alt="" /></a></div>
+                </div>
+                <div class="b-box02">
+                    <div class="b-title-box">
+                        <a href="#a"><span class="b-cate">[카테고리]</span>썸네일게시판 테스트제목</a>
+                        <span class="b-new"><span class="hide">새 글</span></span>
+                    </div>
+                    <div class="b-text-box"><a href="#a">썸네일게시판 테스트내용</a></div>
+                    <ul class="b-info-box">
+                        <li class="b-num">No.5</li>
+                        <li class="b-writer"><span>작성자</span>작성자</li>
+                        <li class="b-date"><span>작성일</span>2020</li>
+                        <li class="b-hit"><span>조회수</span>2043</li>
+                    </ul>
+                    <ul class="b-sns-box">
+                        <li><a href="#a" title="카카오톡 공유하기"><img src="img/ico-sns01.png" alt="카카오톡" /></a></li>
+                        <li><a href="#a" title="네이버 블로그 공유하기"><img src="img/ico-sns02.png" alt="네이버 블로그" /></a></li>
+                        <li><a href="#a" title="인스타그램 공유하기"><img src="img/ico-sns03.png" alt="인스타그램" /></a></li>
+                    </ul>
+                </div>
+                <div class="b-box03"><a href="#a" title="첨부파일 다운로드"><img src="img/ico-file01.gif" alt="첨부파일" /></a></div>
+            </li>
+            <li>
+                <span class="article-chk"><label for="b-chk03" class="hide"></label><input id="b-chk03" type="checkbox" /></span>
+                <div class="b-box01">
+                    <div class="b-num-box">4</div>
+                    <div class="b-img-box"><a href="#a" title=""><img src="img/img-thumbnail03.gif" alt="" /></a></div>
+                </div>
+                <div class="b-box02">
+                    <div class="b-title-box">
+                        <a href="#a"><span class="b-cate">[카테고리]</span>썸네일게시판 테스트제목</a>
+                        <span class="b-new"><span class="hide">새 글</span></span>
+                    </div>
+                    <div class="b-text-box"><a href="#a">썸네일게시판 테스트내용</a></div>
+                    <ul class="b-info-box">
+                        <li class="b-num">No.4</li>
+                        <li class="b-writer"><span>작성자</span>작성자</li>
+                        <li class="b-date"><span>작성일</span>2020</li>
+                        <li class="b-hit"><span>조회수</span>2043</li>
+                    </ul>
+                    <ul class="b-sns-box">
+                        <li><a href="#a" title="카카오톡 공유하기"><img src="img/ico-sns01.png" alt="카카오톡" /></a></li>
+                        <li><a href="#a" title="네이버 블로그 공유하기"><img src="img/ico-sns02.png" alt="네이버 블로그" /></a></li>
+                        <li><a href="#a" title="인스타그램 공유하기"><img src="img/ico-sns03.png" alt="인스타그램" /></a></li>
+                    </ul>
+                </div>
+                <div class="b-box03"><a href="#a" title="첨부파일 다운로드"><img src="img/ico-file01.gif" alt="첨부파일" /></a></div>
+            </li>
+            <li>
+                <span class="article-chk"><label for="b-chk04" class="hide"></label><input id="b-chk04" type="checkbox" /></span>
+                <div class="b-box01">
+                    <div class="b-num-box">3</div>
+                    <div class="b-img-box"><a href="#a" title=""><img src="img/img-thumbnail04.gif" alt="" /></a></div>
+                </div>
+                <div class="b-box02">
+                    <div class="b-title-box">
+                        <a href="#a"><span class="b-cate">[카테고리]</span>썸네일게시판 테스트제목</a>
+                        <span class="b-new"><span class="hide">새 글</span></span>
+                    </div>
+                    <div class="b-text-box"><a href="#a">썸네일게시판 테스트내용</a></div>
+                    <ul class="b-info-box">
+                        <li class="b-num">No.3</li>
+                        <li class="b-writer"><span>작성자</span>작성자</li>
+                        <li class="b-date"><span>작성일</span>2020</li>
+                        <li class="b-hit"><span>조회수</span>2043</li>
+                    </ul>
+                    <ul class="b-sns-box">
+                        <li><a href="#a" title="카카오톡 공유하기"><img src="img/ico-sns01.png" alt="카카오톡" /></a></li>
+                        <li><a href="#a" title="네이버 블로그 공유하기"><img src="img/ico-sns02.png" alt="네이버 블로그" /></a></li>
+                        <li><a href="#a" title="인스타그램 공유하기"><img src="img/ico-sns03.png" alt="인스타그램" /></a></li>
+                    </ul>
+                </div>
+                <div class="b-box03"><a href="#a" title="첨부파일 다운로드"><img src="img/ico-file01.gif" alt="첨부파일" /></a></div>
+            </li>
+            <li>
+                <span class="article-chk"><label for="b-chk05" class="hide"></label><input id="b-chk05" type="checkbox" /></span>
+                <div class="b-box01">
+                    <div class="b-num-box">2</div>
+                    <div class="b-img-box"><a href="#a" title=""><img src="img/img-thumbnail05.gif" alt="" /></a></div>
+                </div>
+                <div class="b-box02">
+                    <div class="b-title-box">
+                        <a href="#a"><span class="b-cate">[카테고리]</span>썸네일게시판 테스트제목</a>
+                        <span class="b-new"><span class="hide">새 글</span></span>
+                    </div>
+                    <div class="b-text-box"><a href="#a">썸네일게시판 테스트내용</a></div>
+                    <ul class="b-info-box">
+                        <li class="b-num">No.2</li>
+                        <li class="b-writer"><span>작성자</span>작성자</li>
+                        <li class="b-date"><span>작성일</span>2020</li>
+                        <li class="b-hit"><span>조회수</span>2043</li>
+                    </ul>
+                    <ul class="b-sns-box">
+                        <li><a href="#a" title="카카오톡 공유하기"><img src="img/ico-sns01.png" alt="카카오톡" /></a></li>
+                        <li><a href="#a" title="네이버 블로그 공유하기"><img src="img/ico-sns02.png" alt="네이버 블로그" /></a></li>
+                        <li><a href="#a" title="인스타그램 공유하기"><img src="img/ico-sns03.png" alt="인스타그램" /></a></li>
+                    </ul>
+                </div>
+                <div class="b-box03"><a href="#a" title="첨부파일 다운로드"><img src="img/ico-file01.gif" alt="첨부파일" /></a></div>
+            </li>
+            <li>
+                <span class="article-chk"><label for="b-chk06" class="hide"></label><input id="b-chk06" type="checkbox" /></span>
+                <div class="b-box01">
+                    <div class="b-num-box">1</div>
+                    <div class="b-img-box"><a href="#a" title=""><img src="img/img-thumbnail06.gif" alt="" /></a></div>
+                </div>
+                <div class="b-box02">
+                    <div class="b-title-box">
+                        <a href="#a"><span class="b-cate">[카테고리]</span>썸네일게시판 테스트제목</a>
+                        <span class="b-new"><span class="hide">새 글</span></span>
+                    </div>
+                    <div class="b-text-box"><a href="#a">썸네일게시판 테스트내용</a></div>
+                    <ul class="b-info-box">
+                        <li class="b-num">No.1</li>
+                        <li class="b-writer"><span>작성자</span>작성자</li>
+                        <li class="b-date"><span>작성일</span>2020</li>
+                        <li class="b-hit"><span>조회수</span>2043</li>
+                    </ul>
+                    <ul class="b-sns-box">
+                        <li><a href="#a" title="카카오톡 공유하기"><img src="img/ico-sns01.png" alt="카카오톡" /></a></li>
+                        <li><a href="#a" title="네이버 블로그 공유하기"><img src="img/ico-sns02.png" alt="네이버 블로그" /></a></li>
+                        <li><a href="#a" title="인스타그램 공유하기"><img src="img/ico-sns03.png" alt="인스타그램" /></a></li>
+                    </ul>
+                </div>
+                <div class="b-box03"><a href="#a" title="첨부파일 다운로드"><img src="img/ico-file01.gif" alt="첨부파일" /></a></div>
+            </li>
+        </ul>
+    </div>
+    <div class="type05">
+        <ul>
+            <li>
+                <span class="article-chk"><label for="b-chk01" class="hide"></label><input id="b-chk01" type="checkbox" /></span>
+                <div class="b-box01">
+                    <div class="b-num-box">6</div>
+                    <div class="b-img-box"><a href="#a" title=""><img src="img/img-thumbnail01.gif" alt="" /></a></div>
+                </div>
+                <div class="b-box02">
+                    <div class="b-title-box">
+                        <a href="#a"><span class="b-cate">[카테고리]</span>썸네일게시판 테스트제목</a>
+                        <span class="b-new"><span class="hide">새 글</span></span>
+                    </div>
+                    <div class="b-text-box"><a href="#a">썸네일게시판 테스트내용</a></div>
+                    <ul class="b-info-box">
+                        <li class="b-num">No.6</li>
+                        <li class="b-writer"><span>작성자</span>작성자</li>
+                        <li class="b-date"><span>작성일</span>2020</li>
+                        <li class="b-hit"><span>조회수</span>2043</li>
+                    </ul>
+                    <ul class="b-sns-box">
+                        <li><a href="#a" title="카카오톡 공유하기"><img src="img/ico-sns01.png" alt="카카오톡" /></a></li>
+                        <li><a href="#a" title="네이버 블로그 공유하기"><img src="img/ico-sns02.png" alt="네이버 블로그" /></a></li>
+                        <li><a href="#a" title="인스타그램 공유하기"><img src="img/ico-sns03.png" alt="인스타그램" /></a></li>
+                    </ul>
+                </div>
+                <div class="b-box03"><a href="#a" title="첨부파일 다운로드"><img src="img/ico-file01.gif" alt="첨부파일" /></a></div>
+            </li>
+            <li>
+                <span class="article-chk"><label for="b-chk02" class="hide"></label><input id="b-chk02" type="checkbox" /></span>
+                <div class="b-box01">
+                    <div class="b-num-box">5</div>
+                    <div class="b-img-box"><a href="#a" title=""><img src="img/img-thumbnail02.gif" alt="" /></a></div>
+                </div>
+                <div class="b-box02">
+                    <div class="b-title-box">
+                        <a href="#a"><span class="b-cate">[카테고리]</span>썸네일게시판 테스트제목</a>
+                        <span class="b-new"><span class="hide">새 글</span></span>
+                    </div>
+                    <div class="b-text-box"><a href="#a">썸네일게시판 테스트내용</a></div>
+                    <ul class="b-info-box">
+                        <li class="b-num">No.5</li>
+                        <li class="b-writer"><span>작성자</span>작성자</li>
+                        <li class="b-date"><span>작성일</span>2020</li>
+                        <li class="b-hit"><span>조회수</span>2043</li>
+                    </ul>
+                    <ul class="b-sns-box">
+                        <li><a href="#a" title="카카오톡 공유하기"><img src="img/ico-sns01.png" alt="카카오톡" /></a></li>
+                        <li><a href="#a" title="네이버 블로그 공유하기"><img src="img/ico-sns02.png" alt="네이버 블로그" /></a></li>
+                        <li><a href="#a" title="인스타그램 공유하기"><img src="img/ico-sns03.png" alt="인스타그램" /></a></li>
+                    </ul>
+                </div>
+                <div class="b-box03"><a href="#a" title="첨부파일 다운로드"><img src="img/ico-file01.gif" alt="첨부파일" /></a></div>
+            </li>
+            <li>
+                <span class="article-chk"><label for="b-chk03" class="hide"></label><input id="b-chk03" type="checkbox" /></span>
+                <div class="b-box01">
+                    <div class="b-num-box">4</div>
+                    <div class="b-img-box"><a href="#a" title=""><img src="img/img-thumbnail03.gif" alt="" /></a></div>
+                </div>
+                <div class="b-box02">
+                    <div class="b-title-box">
+                        <a href="#a"><span class="b-cate">[카테고리]</span>썸네일게시판 테스트제목</a>
+                        <span class="b-new"><span class="hide">새 글</span></span>
+                    </div>
+                    <div class="b-text-box"><a href="#a">썸네일게시판 테스트내용</a></div>
+                    <ul class="b-info-box">
+                        <li class="b-num">No.4</li>
+                        <li class="b-writer"><span>작성자</span>작성자</li>
+                        <li class="b-date"><span>작성일</span>2020</li>
+                        <li class="b-hit"><span>조회수</span>2043</li>
+                    </ul>
+                    <ul class="b-sns-box">
+                        <li><a href="#a" title="카카오톡 공유하기"><img src="img/ico-sns01.png" alt="카카오톡" /></a></li>
+                        <li><a href="#a" title="네이버 블로그 공유하기"><img src="img/ico-sns02.png" alt="네이버 블로그" /></a></li>
+                        <li><a href="#a" title="인스타그램 공유하기"><img src="img/ico-sns03.png" alt="인스타그램" /></a></li>
+                    </ul>
+                </div>
+                <div class="b-box03"><a href="#a" title="첨부파일 다운로드"><img src="img/ico-file01.gif" alt="첨부파일" /></a></div>
+            </li>
+            <li>
+                <span class="article-chk"><label for="b-chk04" class="hide"></label><input id="b-chk04" type="checkbox" /></span>
+                <div class="b-box01">
+                    <div class="b-num-box">3</div>
+                    <div class="b-img-box"><a href="#a" title=""><img src="img/img-thumbnail04.gif" alt="" /></a></div>
+                </div>
+                <div class="b-box02">
+                    <div class="b-title-box">
+                        <a href="#a"><span class="b-cate">[카테고리]</span>썸네일게시판 테스트제목</a>
+                        <span class="b-new"><span class="hide">새 글</span></span>
+                    </div>
+                    <div class="b-text-box"><a href="#a">썸네일게시판 테스트내용</a></div>
+                    <ul class="b-info-box">
+                        <li class="b-num">No.3</li>
+                        <li class="b-writer"><span>작성자</span>작성자</li>
+                        <li class="b-date"><span>작성일</span>2020</li>
+                        <li class="b-hit"><span>조회수</span>2043</li>
+                    </ul>
+                    <ul class="b-sns-box">
+                        <li><a href="#a" title="카카오톡 공유하기"><img src="img/ico-sns01.png" alt="카카오톡" /></a></li>
+                        <li><a href="#a" title="네이버 블로그 공유하기"><img src="img/ico-sns02.png" alt="네이버 블로그" /></a></li>
+                        <li><a href="#a" title="인스타그램 공유하기"><img src="img/ico-sns03.png" alt="인스타그램" /></a></li>
+                    </ul>
+                </div>
+                <div class="b-box03"><a href="#a" title="첨부파일 다운로드"><img src="img/ico-file01.gif" alt="첨부파일" /></a></div>
+            </li>
+            <li>
+                <span class="article-chk"><label for="b-chk05" class="hide"></label><input id="b-chk05" type="checkbox" /></span>
+                <div class="b-box01">
+                    <div class="b-num-box">2</div>
+                    <div class="b-img-box"><a href="#a" title=""><img src="img/img-thumbnail05.gif" alt="" /></a></div>
+                </div>
+                <div class="b-box02">
+                    <div class="b-title-box">
+                        <a href="#a"><span class="b-cate">[카테고리]</span>썸네일게시판 테스트제목</a>
+                        <span class="b-new"><span class="hide">새 글</span></span>
+                    </div>
+                    <div class="b-text-box"><a href="#a">썸네일게시판 테스트내용</a></div>
+                    <ul class="b-info-box">
+                        <li class="b-num">No.2</li>
+                        <li class="b-writer"><span>작성자</span>작성자</li>
+                        <li class="b-date"><span>작성일</span>2020</li>
+                        <li class="b-hit"><span>조회수</span>2043</li>
+                    </ul>
+                    <ul class="b-sns-box">
+                        <li><a href="#a" title="카카오톡 공유하기"><img src="img/ico-sns01.png" alt="카카오톡" /></a></li>
+                        <li><a href="#a" title="네이버 블로그 공유하기"><img src="img/ico-sns02.png" alt="네이버 블로그" /></a></li>
+                        <li><a href="#a" title="인스타그램 공유하기"><img src="img/ico-sns03.png" alt="인스타그램" /></a></li>
+                    </ul>
+                </div>
+                <div class="b-box03"><a href="#a" title="첨부파일 다운로드"><img src="img/ico-file01.gif" alt="첨부파일" /></a></div>
+            </li>
+            <li>
+                <span class="article-chk"><label for="b-chk06" class="hide"></label><input id="b-chk06" type="checkbox" /></span>
+                <div class="b-box01">
+                    <div class="b-num-box">1</div>
+                    <div class="b-img-box"><a href="#a" title=""><img src="img/img-thumbnail06.gif" alt="" /></a></div>
+                </div>
+                <div class="b-box02">
+                    <div class="b-title-box">
+                        <a href="#a"><span class="b-cate">[카테고리]</span>썸네일게시판 테스트제목</a>
+                        <span class="b-new"><span class="hide">새 글</span></span>
+                    </div>
+                    <div class="b-text-box"><a href="#a">썸네일게시판 테스트내용</a></div>
+                    <ul class="b-info-box">
+                        <li class="b-num">No.1</li>
+                        <li class="b-writer"><span>작성자</span>작성자</li>
+                        <li class="b-date"><span>작성일</span>2020</li>
+                        <li class="b-hit"><span>조회수</span>2043</li>
+                    </ul>
+                    <ul class="b-sns-box">
+                        <li><a href="#a" title="카카오톡 공유하기"><img src="img/ico-sns01.png" alt="카카오톡" /></a></li>
+                        <li><a href="#a" title="네이버 블로그 공유하기"><img src="img/ico-sns02.png" alt="네이버 블로그" /></a></li>
+                        <li><a href="#a" title="인스타그램 공유하기"><img src="img/ico-sns03.png" alt="인스타그램" /></a></li>
+                    </ul>
+                </div>
+                <div class="b-box03"><a href="#a" title="첨부파일 다운로드"><img src="img/ico-file01.gif" alt="첨부파일" /></a></div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="backbutton">
+		<ul class="btn-wrap">	
+			<li><a href="../../index.html">목록으로 돌아가기</a></li>              
+		</ul>
+	</div>
+</body>

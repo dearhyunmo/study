@@ -1,0 +1,251 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>무제 문서</title>
+	<link rel="stylesheet" type="text/css" href="css/faqwrite.css"/>
+	<link rel="stylesheet" href="../css/common.css" type="text/css"/>
+	<link rel="stylesheet" href="../css/reset.css" type="text/css"/>
+	<script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		$('#stype').change(function() {
+			var state = $('#stype option:selected').val();
+			if ( state == 'vtype01' ) {
+				$(".type01").css("display","block");
+				$(".type02").css("display","none");
+				$(".type03").css("display","none");
+				$(".type04").css("display","none");
+			} else if(state == 'vtype02'){
+				$(".type01").css("display","none");
+				$(".type02").css("display","block");
+				$(".type03").css("display","none");
+				$(".type04").css("display","none");
+			} else if(state == 'vtype03'){
+				$(".type01").css("display","none");
+				$(".type02").css("display","none");
+				$(".type03").css("display","block");
+				$(".type04").css("display","none");
+            } else{
+				$(".type01").css("display","none");
+				$(".type02").css("display","none");
+				$(".type03").css("display","none");
+				$(".type04").css("display","block");
+            }
+        });
+    });
+	</script>
+</head>
+
+<body>
+
+	<div class="stypediv">
+		<h1>FAQ 게시판 작성 Part</h1>
+		타입을 선택해주세요
+		<select name="stype" id="stype">
+		  <option value="vtype01" selected="selected">Type01</option>
+		  <option value="vtype02">Type02</option>
+		  <option value="vtype03">Type03</option>
+		  <option value="vtype04">Type04</option>
+		</select>
+    </div>
+
+    <div class="type01">
+        <form action="" method="">
+            <fieldset>
+                <legend class="hide">게시글 등록</legend>
+                <table summary="게시판 글 등록">
+                    <caption class="hide">게시판 글 등록</caption>
+                    <colgroup>
+                        <col class="b-col01">
+                        <col width="b-col02">
+                        <col width="b-col03">
+                        <col width="b-col04">
+                    </colgroup>
+                    <thead>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">카테고리</th>
+                            <td colspan="3">
+                                <input type="text" id="wr-tit" name="wr-tit-name" class="b-input itype01" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="wr-tit">질문</label></th>
+                            <td colspan="3">
+                                <input type="text" id="wr-tit" name="wr-tit-name" class="b-input itype01" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="wr-writer">작성자</label></th>
+                            <td>
+                                <input type="text" id="wr-writer" name="wr-writer-name" class="b-input itype01" />
+                            </td>
+                            <th scope="row"><label for="wr-writer">등록일</label></th>
+                            <td>
+                                <input type="text" id="wr-date" name="wr-date-name" class="b-input itype01" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="wr-con">답변</label></th>
+                            <td colspan="3">
+                                <textarea id="wr-con" name="wr-con-name" class="b-input b-textarea"></textarea>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </fieldset>
+        </form>
+    </div>
+    <div class="type02">
+        <form action="" method="">
+            <fieldset>
+                <legend class="hide">게시글 등록</legend>
+                <table summary="게시판 글 등록">
+                    <caption class="hide">게시판 글 등록</caption>
+                    <colgroup>
+                        <col class="b-col01">
+                        <col width="b-col02">
+                        <col width="b-col03">
+                        <col width="b-col04">
+                    </colgroup>
+                    <thead>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">카테고리</th>
+                            <td colspan="3">
+                                <input type="text" id="wr-tit" name="wr-tit-name" class="b-input itype01" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="wr-tit">질문</label></th>
+                            <td colspan="3">
+                                <input type="text" id="wr-tit" name="wr-tit-name" class="b-input itype01" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="wr-writer">작성자</label></th>
+                            <td>
+                                <input type="text" id="wr-writer" name="wr-writer-name" class="b-input itype01" />
+                            </td>
+                            <th scope="row"><label for="wr-writer">등록일</label></th>
+                            <td>
+                                <input type="text" id="wr-date" name="wr-date-name" class="b-input itype01" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="wr-con">답변</label></th>
+                            <td colspan="3">
+                                <textarea id="wr-con" name="wr-con-name" class="b-input b-textarea"></textarea>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </fieldset>
+        </form>
+    </div>
+    <div class="type03">
+        <form action="" method="">
+            <fieldset>
+                <legend class="hide">게시글 등록</legend>
+                <table summary="게시판 글 등록">
+                    <caption class="hide">게시판 글 등록</caption>
+                    <colgroup>
+                        <col class="b-col01">
+                        <col width="b-col02">
+                        <col width="b-col03">
+                        <col width="b-col04">
+                    </colgroup>
+                    <thead>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">카테고리</th>
+                            <td colspan="3">
+                                <input type="text" id="wr-tit" name="wr-tit-name" class="b-input itype01" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="wr-tit">질문</label></th>
+                            <td colspan="3">
+                                <input type="text" id="wr-tit" name="wr-tit-name" class="b-input itype01" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="wr-writer">작성자</label></th>
+                            <td>
+                                <input type="text" id="wr-writer" name="wr-writer-name" class="b-input itype01" />
+                            </td>
+                            <th scope="row"><label for="wr-writer">등록일</label></th>
+                            <td>
+                                <input type="text" id="wr-date" name="wr-date-name" class="b-input itype01" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="wr-con">답변</label></th>
+                            <td colspan="3">
+                                <textarea id="wr-con" name="wr-con-name" class="b-input b-textarea"></textarea>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </fieldset>
+        </form>
+    </div>
+    <div class="type04">
+        <form action="" method="">
+            <fieldset>
+                <legend class="hide">게시글 등록</legend>
+                <table summary="게시판 글 등록">
+                    <caption class="hide">게시판 글 등록</caption>
+                    <colgroup>
+                        <col class="b-col01">
+                        <col width="b-col02">
+                        <col width="b-col03">
+                        <col width="b-col04">
+                    </colgroup>
+                    <thead>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">카테고리</th>
+                            <td colspan="3">
+                                <input type="text" id="wr-tit" name="wr-tit-name" class="b-input itype01" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="wr-tit">질문</label></th>
+                            <td colspan="3">
+                                <input type="text" id="wr-tit" name="wr-tit-name" class="b-input itype01" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="wr-writer">작성자</label></th>
+                            <td>
+                                <input type="text" id="wr-writer" name="wr-writer-name" class="b-input itype01" />
+                            </td>
+                            <th scope="row"><label for="wr-writer">등록일</label></th>
+                            <td>
+                                <input type="text" id="wr-date" name="wr-date-name" class="b-input itype01" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="wr-con">답변</label></th>
+                            <td colspan="3">
+                                <textarea id="wr-con" name="wr-con-name" class="b-input b-textarea"></textarea>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="backbutton">
+		<ul class="btn-wrap">	
+			<li><a href="../../index.html">목록으로 돌아가기</a></li>              
+		</ul>
+	</div>
+</body>

@@ -1,0 +1,199 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>무제 문서</title>
+	<link rel="stylesheet" type="text/css" href="css/paging.css"/>
+	<link rel="stylesheet" href="../css/common.css" type="text/css"/>
+	<link rel="stylesheet" href="../css/reset.css" type="text/css"/>
+	<script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+	<script>
+	$(document).ready(function(){		
+		$('#stype').change(function() {
+			var state = $('#stype option:selected').val();
+			if ( state == 'vtype01' ) {
+				$(".type01").css("display","block");
+				$(".type02").css("display","none");
+				$(".type03").css("display","none");
+				$(".type04").css("display","none");
+			} else if(state == 'vtype02'){
+				$(".type01").css("display","none");
+				$(".type02").css("display","block");
+				$(".type03").css("display","none");
+				$(".type04").css("display","none");
+			} else if(state == 'vtype03'){
+				$(".type01").css("display","none");
+				$(".type02").css("display","none");
+				$(".type03").css("display","block");
+				$(".type04").css("display","none");
+			} else{
+				$(".type01").css("display","none");
+				$(".type02").css("display","none");
+				$(".type03").css("display","none");
+				$(".type04").css("display","block");
+			} 
+		});
+	});
+	</script>
+</head>
+
+<body>
+
+	<div class="stypediv">
+		<h1>게시판 페이징 Part</h1>
+		타입을 선택해주세요
+		<select name="stype" id="stype">
+		  <option value="vtype01" selected="selected">Type01</option>
+		  <option value="vtype02">Type02</option>
+		  <option value="vtype03">Type03</option>
+		  <option value="vtype04">Type04</option>
+		</select>
+	</div>
+
+	<div class="type01">
+	<div class="b-paging-wrap"> 
+		<ul>
+			<li class="first pager">
+				<a href="#a" title="첫 페이지로 이동하기"><span class="hide">첫 페이지로 이동하기</span></a></li>
+			<li class="prev pager">
+				<a href="#a" title="이전 페이지로 이동하기"><span class="hide">이전 페이지로 이동하기</span></a></li>
+			<li>
+				<a class="active" href="#a">1</a></li>
+			<li>
+				<a href="#a">2</a></li>	
+			<li>
+				<a href="#a">3</a></li>	
+			<li>
+				<a href="#a">4</a></li>	
+			<li>
+				<a href="#a">5</a></li>	
+			<li>
+				<a href="#a">6</a></li>	
+			<li>
+				<a href="#a">7</a></li>	
+			<li>
+				<a href="#a">8</a></li>	
+			<li>
+				<a href="#a">9</a></li>	
+			<li>
+				<a href="#a">10</a></li>	
+			<li class="next pager">
+				<a href="#a" title="다음 페이지로 이동하기"><span class="hide">다음 페이지로 이동하기</span></a></li>
+			<li class="last pager">
+				<a href="#a" title="마지막 페이지로 이동하기"><span class="hide">마지막 페이지로 이동하기</span></a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="type02">
+	<div class="b-paging-wrap"> 
+		<ul>
+			<li class="first pager">
+				<a href="#a" title="첫 페이지로 이동하기"><span class="hide">첫 페이지로 이동하기</span></a></li>
+			<li class="prev pager">
+				<a href="#a" title="이전 페이지로 이동하기"><span class="hide">이전 페이지로 이동하기</span></a></li>
+			<li>
+				<a class="active" href="#a">1</a></li>
+			<li>
+				<a href="#a">2</a></li>	
+			<li>
+				<a href="#a">3</a></li>	
+			<li>
+				<a href="#a">4</a></li>	
+			<li>
+				<a href="#a">5</a></li>	
+			<li>
+				<a href="#a">6</a></li>	
+			<li>
+				<a href="#a">7</a></li>	
+			<li>
+				<a href="#a">8</a></li>	
+			<li>
+				<a href="#a">9</a></li>	
+			<li>
+				<a href="#a">10</a></li>	
+			<li class="next pager">
+				<a href="#a" title="다음 페이지로 이동하기"><span class="hide">다음 페이지로 이동하기</span></a></li>
+			<li class="last pager">
+				<a href="#a" title="마지막 페이지로 이동하기"><span class="hide">마지막 페이지로 이동하기</span></a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="type03">
+	<div class="b-paging-wrap"> 
+		<ul>
+			<li class="first pager">
+				<a href="#a" title="첫 페이지로 이동하기"><span class="hide">첫 페이지로 이동하기</span></a></li>
+			<li class="prev pager">
+				<a href="#a" title="이전 페이지로 이동하기"><span class="hide">이전 페이지로 이동하기</span></a></li>
+			<li>
+				<a class="active" href="#a">1</a></li>
+			<li>
+				<a href="#a">2</a></li>	
+			<li>
+				<a href="#a">3</a></li>	
+			<li>
+				<a href="#a">4</a></li>	
+			<li>
+				<a href="#a">5</a></li>	
+			<li>
+				<a href="#a">6</a></li>	
+			<li>
+				<a href="#a">7</a></li>	
+			<li>
+				<a href="#a">8</a></li>	
+			<li>
+				<a href="#a">9</a></li>	
+			<li>
+				<a href="#a">10</a></li>	
+			<li class="next pager">
+				<a href="#a" title="다음 페이지로 이동하기"><span class="hide">다음 페이지로 이동하기</span></a></li>
+			<li class="last pager">
+				<a href="#a" title="마지막 페이지로 이동하기"><span class="hide">마지막 페이지로 이동하기</span></a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="type04">
+	<div class="b-paging-wrap"> 
+		<ul>
+			<li class="first pager">
+				<a href="#a" title="첫 페이지로 이동하기"><span class="hide">첫 페이지로 이동하기</span></a></li>
+			<li class="prev pager">
+				<a href="#a" title="이전 페이지로 이동하기"><span class="hide">이전 페이지로 이동하기</span></a></li>
+			<li>
+				<a class="active" href="#a">1</a></li>
+			<li>
+				<a href="#a">2</a></li>	
+			<li>
+				<a href="#a">3</a></li>	
+			<li>
+				<a href="#a">4</a></li>	
+			<li>
+				<a href="#a">5</a></li>	
+			<li>
+				<a href="#a">6</a></li>	
+			<li>
+				<a href="#a">7</a></li>	
+			<li>
+				<a href="#a">8</a></li>	
+			<li>
+				<a href="#a">9</a></li>	
+			<li>
+				<a href="#a">10</a></li>	
+			<li class="next pager">
+				<a href="#a" title="다음 페이지로 이동하기"><span class="hide">다음 페이지로 이동하기</span></a></li>
+			<li class="last pager">
+				<a href="#a" title="마지막 페이지로 이동하기"><span class="hide">마지막 페이지로 이동하기</span></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="backbutton">
+		<ul class="btn-wrap">	
+			<li><a href="../../index.html">목록으로 돌아가기</a></li>              
+		</ul>
+	</div>
+</body>
+</html>

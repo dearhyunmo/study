@@ -1,0 +1,560 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>무제 문서</title>
+	<link rel="stylesheet" type="text/css" href="css/write.css"/>
+	<link rel="stylesheet" href="../css/common.css" type="text/css"/>
+	<link rel="stylesheet" href="../css/reset.css" type="text/css"/>
+	<script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+	<script>
+	$(document).ready(function(){		
+		$('#stype').change(function() {
+			var state = $('#stype option:selected').val();
+			if ( state == 'vtype01' ) {
+				$(".type01").css("display","block");
+				$(".type02").css("display","none");
+				$(".type03").css("display","none");
+			} else if(state == 'vtype02'){
+				$(".type01").css("display","none");
+				$(".type02").css("display","block");
+				$(".type03").css("display","none");
+			}else{
+				$(".type01").css("display","none");
+				$(".type02").css("display","none");
+				$(".type03").css("display","block");
+			} 
+		});
+	});
+	</script>
+</head>
+
+<body>
+
+	<div class="stypediv">
+		<h1>게시판 페이징 Part</h1>
+		타입을 선택해주세요
+		<select name="stype" id="stype">
+		  <option value="vtype01" selected="selected">Type01</option>
+		  <option value="vtype02">Type02</option>
+		  <option value="vtype03">Type03</option>
+		</select>
+    </div>
+    
+    <div class="type01" >
+        <form action="" method="">
+            <fieldset>
+                <legend class="hide">게시글 등록</legend>
+                <table summary="게시판 글 등록">
+                    <caption class="hide">게시판 글 등록</caption>
+                    <colgroup>
+                        <col class="b-col01">
+                        <col width="b-col02">
+                        <col class="b-col03">
+                        <col width="b-col04">
+                    </colgroup>
+                    <thead>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">상단공지</th>
+                            <td  colspan="3">
+                                <div class="b-sel-box">
+                                    <a href="#a" class="b-sel-title" title="공지">공지</a>
+                                    <ul>
+                                        <li><a href="#a" title="공지">공지</a></li>
+                                        <li><a href="#a" title="공지안함">공지안함</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="wr-tit">* 제목</label></th>
+                            <td  colspan="3">
+                                <input type="text" id="wr-tit" name="wr-tit-name" class="b-input itype01" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="wr-writer">작성자</label></th>
+                            <td>
+                                <input type="text" id="wr-writer" name="wr-writer-name" class="b-input itype01" />
+                            </td>
+                            <th scope="row"><label for="wr-pw">비밀번호</label></th>
+                            <td >
+                                <input type="text" id="wr-pw" name="wr-pw-name" class="b-input itype01" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="wr-period">공지기간</label></th>
+                            <td  colspan="3">
+                                <div class="b-period-box">
+                                    <p><input type="checkbox" id="wr-notice" name="wr-notice" class="b-chk" /><label for="wr-notice">공지여부 선택</label></p>
+                                    <input type="text" id="wr-period" title="시작 날짜" name="wr-period-name" class="datepicker b-input"><span>~</span>
+                                    <input type="text" id="wr-period-end" title="마지막 날짜" name="wr-period-end-name" class="datepicker b-input">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">주소</th>
+                            <td  colspan="3">
+                                <div class="b-address-box">
+                                    <div>
+                                        <div>
+                                            <label for="wr-ad-st">우편번호 앞자리</label><input type="text" id="wr-ad-st" name="wr-ad-st-name" class="b-input" /><span>-</span><label for="wr-ad-end">우편번호 뒷자리</label><input type="text" id="wr-ad-end" name="wr-ad-end-name" class="b-input" />
+                                        </div>
+                                        <button type="button">주소검색</button>
+                                    </div>
+                                    <label for="wr-ad-detail">상세주소</label><input type="text" id="wr-ad-st" name="wr-ad-st-name" class="b-input" />
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">전화번호</th>
+                            <td  colspan="3">
+                                <div class="b-tel-box">
+                                    <label for="wr-tel-st">전화번호 앞자리</label><input type="text" id="wr-tel-st" name="wr-tel-st-name" class="b-input" /><span>-</span><label for="wr-tel-mid">전화번호 중간자리</label><input type="text" id="wr-tel-mid" name="wr-tel-mid-name" class="b-input" /><span>-</span><label for="wr-tel-end">전화번호 뒷자리</label><input type="text" id="wr-tel-end" name="wr-tel-end-name" class="b-input" />
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">성별</th>
+                            <td  colspan="3">
+                                <div class="b-gender-box">
+                                    <input type="radio" id="wr-gender01" name="wr-gender" class="b-radio" /><label for="wr-gender01">남</label>
+                                    <input type="radio" id="wr-gender02" name="wr-gender" class="b-radio" /><label for="wr-gender02">여</label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">관계</th>
+                            <td  colspan="3">
+                                <div class="b-relation-box">
+                                    <div>
+                                        <input type="checkbox" id="wr-relation01" name="wr-relation" class="b-chk" /><label for="wr-relation01">동료</label>
+                                        <input type="checkbox" id="wr-relation02" name="wr-relation" class="b-chk" /><label for="wr-relation02">교수</label>
+                                        <input type="checkbox" id="wr-relation03" name="wr-relation" class="b-chk" /><label for="wr-relation03">교직원</label>
+                                    </div>
+                                    <div>
+                                        <label for="wr-relation-etc">기타</label><input type="text" id="wr-relation-etc" name="wr-relation-etc" class="b-input" />
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="wr-url">유튜브</label></th>
+                            <td  colspan="3">
+                                <div class="b-url-box">
+                                    <input type="text" id="wr-url" name="wr-url-name" class="b-input" placeholder="동영상 고유 ID값 입력" />
+                                    <p>
+                                        Ex) https://www.youtube.com/watch?v=<span>abcdefg</span><br />
+                                        빨간색 동영상 고유코드만 넣어주세요
+                                    </p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="wr-con">내용</label></th>
+                            <td  colspan="3">
+                                <textarea id="wr-con" name="wr-con-name" class="b-input b-textarea"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">첨부</th>
+                            <td  colspan="3">
+                                <div class="b-file-box itype01">
+                                    <div class="b-left-box">
+                                        <div class="b-sel-box">
+                                            <a href="#a" class="b-sel-title" title="1">1</a>
+                                            <ul>
+                                                <li><a href="#a" title="1">1</a></li>
+                                                <li><a href="#a" title="2">2</a></li>
+                                                <li><a href="#a" title="3">3</a></li>
+                                            </ul>
+                                        </div>
+                                        <p class="b-guide-txt">
+                                            파일 개수를 지정해 주십시오.
+                                        </p>
+                                    </div>
+                                    <div class="b-right-box">
+                                        <p class="b-guide-txt">[업로드 가능 총 파일 크기 : 10M]</p>
+                                    </div>
+                                </div>
+                                <div class="b-file-box itype02">
+                                    <div class="b-left-box">
+                                        <label for="wr-file" class="b-guide-txt">첨부<span>1</span></label>
+                                        <button type="button" class="b-file-btn">파일선택</button>
+                                        <input type="text" id="wr-file" name="wr-file-name" class="b-file-status" disabled="disabled" value="선택된 파일 없음">
+                                        <button type="button" class="b-add-btn">추가</button>
+                                    </div>
+                                    <div class="b-right-box">
+                                        <label for="wr-txt" class="b-guide-txt">대체텍스트</label>
+                                        <input type="text" id="wr-txt" name="wr-txt-name" class="b-input">
+                                    </div>
+                                </div>
+                                <div class="b-file-box itype03">
+                                    <div>
+                                        <input type="text" id="wr-file" name="wr-file-name" class="b-input">
+                                        <button type="button" class="b-file-btn">찾아보기</button>
+                                        <button type="button" class="b-add-btn">추가</button>
+                                    </div>
+                                    <div>
+                                        <ul>
+                                            <li><span>첨부파일01.jpg</span><a href="#a" title="삭제">삭제</a></li>
+                                            <li><span>첨부파일02.jpg</span><a href="#a" title="삭제">삭제</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </fieldset>
+        </form>
+    </div>
+    <div class="type02" >
+        <form action="" method="">
+            <fieldset>
+                <legend class="hide">게시글 등록</legend>
+                <table summary="게시판 글 등록">
+                    <caption class="hide">게시판 글 등록</caption>
+                    <colgroup>
+                        <col class="b-col01">
+                        <col width="b-col02">
+                        <col class="b-col03">
+                        <col width="b-col04">
+                    </colgroup>
+                    <thead>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">상단공지</th>
+                            <td  colspan="3">
+                                <div class="b-sel-box">
+                                    <a href="#a" class="b-sel-title" title="공지">공지</a>
+                                    <ul>
+                                        <li><a href="#a" title="공지">공지</a></li>
+                                        <li><a href="#a" title="공지안함">공지안함</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="wr-tit">* 제목</label></th>
+                            <td  colspan="3">
+                                <input type="text" id="wr-tit" name="wr-tit-name" class="b-input itype01" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="wr-writer">작성자</label></th>
+                            <td>
+                                <input type="text" id="wr-writer" name="wr-writer-name" class="b-input itype01" />
+                            </td>
+                            <th scope="row"><label for="wr-pw">비밀번호</label></th>
+                            <td >
+                                <input type="text" id="wr-pw" name="wr-pw-name" class="b-input itype01" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="wr-period">공지기간</label></th>
+                            <td  colspan="3">
+                                <div class="b-period-box">
+                                    <p><input type="checkbox" id="wr-notice" name="wr-notice" class="b-chk" /><label for="wr-notice">공지여부 선택</label></p>
+                                    <input type="text" id="wr-period" title="시작 날짜" name="wr-period-name" class="datepicker b-input"><span>~</span>
+                                    <input type="text" id="wr-period-end" title="마지막 날짜" name="wr-period-end-name" class="datepicker b-input">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">주소</th>
+                            <td  colspan="3">
+                                <div class="b-address-box">
+                                    <div>
+                                        <div>
+                                            <label for="wr-ad-st">우편번호 앞자리</label><input type="text" id="wr-ad-st" name="wr-ad-st-name" class="b-input" /><span>-</span><label for="wr-ad-end">우편번호 뒷자리</label><input type="text" id="wr-ad-end" name="wr-ad-end-name" class="b-input" />
+                                        </div>
+                                        <button type="button">주소검색</button>
+                                    </div>
+                                    <label for="wr-ad-detail">상세주소</label><input type="text" id="wr-ad-st" name="wr-ad-st-name" class="b-input" />
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">전화번호</th>
+                            <td  colspan="3">
+                                <div class="b-tel-box">
+                                    <label for="wr-tel-st">전화번호 앞자리</label><input type="text" id="wr-tel-st" name="wr-tel-st-name" class="b-input" /><span>-</span><label for="wr-tel-mid">전화번호 중간자리</label><input type="text" id="wr-tel-mid" name="wr-tel-mid-name" class="b-input" /><span>-</span><label for="wr-tel-end">전화번호 뒷자리</label><input type="text" id="wr-tel-end" name="wr-tel-end-name" class="b-input" />
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">성별</th>
+                            <td  colspan="3">
+                                <div class="b-gender-box">
+                                    <input type="radio" id="wr-gender01" name="wr-gender" class="b-radio" /><label for="wr-gender01">남</label>
+                                    <input type="radio" id="wr-gender02" name="wr-gender" class="b-radio" /><label for="wr-gender02">여</label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">관계</th>
+                            <td  colspan="3">
+                                <div class="b-relation-box">
+                                    <div>
+                                        <input type="checkbox" id="wr-relation01" name="wr-relation" class="b-chk" /><label for="wr-relation01">동료</label>
+                                        <input type="checkbox" id="wr-relation02" name="wr-relation" class="b-chk" /><label for="wr-relation02">교수</label>
+                                        <input type="checkbox" id="wr-relation03" name="wr-relation" class="b-chk" /><label for="wr-relation03">교직원</label>
+                                    </div>
+                                    <div>
+                                        <label for="wr-relation-etc">기타</label><input type="text" id="wr-relation-etc" name="wr-relation-etc" class="b-input" />
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="wr-url">유튜브</label></th>
+                            <td  colspan="3">
+                                <div class="b-url-box">
+                                    <input type="text" id="wr-url" name="wr-url-name" class="b-input" placeholder="동영상 고유 ID값 입력" />
+                                    <p>
+                                        Ex) https://www.youtube.com/watch?v=<span>abcdefg</span><br />
+                                        빨간색 동영상 고유코드만 넣어주세요
+                                    </p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="wr-con">내용</label></th>
+                            <td  colspan="3">
+                                <textarea id="wr-con" name="wr-con-name" class="b-input b-textarea"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">첨부</th>
+                            <td  colspan="3">
+                                <div class="b-file-box itype01">
+                                    <div class="b-left-box">
+                                        <div class="b-sel-box">
+                                            <a href="#a" class="b-sel-title" title="1">1</a>
+                                            <ul>
+                                                <li><a href="#a" title="1">1</a></li>
+                                                <li><a href="#a" title="2">2</a></li>
+                                                <li><a href="#a" title="3">3</a></li>
+                                            </ul>
+                                        </div>
+                                        <p class="b-guide-txt">
+                                            파일 개수를 지정해 주십시오.
+                                        </p>
+                                    </div>
+                                    <div class="b-right-box">
+                                        <p class="b-guide-txt">[업로드 가능 총 파일 크기 : 10M]</p>
+                                    </div>
+                                </div>
+                                <div class="b-file-box itype02">
+                                    <div class="b-left-box">
+                                        <label for="wr-file" class="b-guide-txt">첨부<span>1</span></label>
+                                        <button type="button" class="b-file-btn">파일선택</button>
+                                        <input type="text" id="wr-file" name="wr-file-name" class="b-file-status" disabled="disabled" value="선택된 파일 없음">
+                                        <button type="button" class="b-add-btn">추가</button>
+                                    </div>
+                                    <div class="b-right-box">
+                                        <label for="wr-txt" class="b-guide-txt">대체텍스트</label>
+                                        <input type="text" id="wr-txt" name="wr-txt-name" class="b-input">
+                                    </div>
+                                </div>
+                                <div class="b-file-box itype03">
+                                    <div>
+                                        <input type="text" id="wr-file" name="wr-file-name" class="b-input">
+                                        <button type="button" class="b-file-btn">찾아보기</button>
+                                        <button type="button" class="b-add-btn">추가</button>
+                                    </div>
+                                    <div>
+                                        <ul>
+                                            <li><span>첨부파일01.jpg</span><a href="#a" title="삭제">삭제</a></li>
+                                            <li><span>첨부파일02.jpg</span><a href="#a" title="삭제">삭제</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </fieldset>
+        </form>
+    </div>
+    <div class="type03" >
+        <form action="" method="">
+            <fieldset>
+                <legend class="hide">게시글 등록</legend>
+                <table summary="게시판 글 등록">
+                    <caption class="hide">게시판 글 등록</caption>
+                    <colgroup>
+                        <col class="b-col01">
+                        <col width="b-col02">
+                        <col class="b-col03">
+                        <col width="b-col04">
+                    </colgroup>
+                    <thead>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">상단공지</th>
+                            <td  colspan="3">
+                                <div class="b-sel-box">
+                                    <a href="#a" class="b-sel-title" title="공지">공지</a>
+                                    <ul>
+                                        <li><a href="#a" title="공지">공지</a></li>
+                                        <li><a href="#a" title="공지안함">공지안함</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="wr-tit">* 제목</label></th>
+                            <td  colspan="3">
+                                <input type="text" id="wr-tit" name="wr-tit-name" class="b-input itype01" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="wr-writer">작성자</label></th>
+                            <td>
+                                <input type="text" id="wr-writer" name="wr-writer-name" class="b-input itype01" />
+                            </td>
+                            <th scope="row"><label for="wr-pw">비밀번호</label></th>
+                            <td >
+                                <input type="text" id="wr-pw" name="wr-pw-name" class="b-input itype01" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="wr-period">공지기간</label></th>
+                            <td  colspan="3">
+                                <div class="b-period-box">
+                                    <p><input type="checkbox" id="wr-notice" name="wr-notice" class="b-chk" /><label for="wr-notice">공지여부 선택</label></p>
+                                    <input type="text" id="wr-period" title="시작 날짜" name="wr-period-name" class="datepicker b-input"><span>~</span>
+                                    <input type="text" id="wr-period-end" title="마지막 날짜" name="wr-period-end-name" class="datepicker b-input">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">주소</th>
+                            <td  colspan="3">
+                                <div class="b-address-box">
+                                    <div>
+                                        <div>
+                                            <label for="wr-ad-st">우편번호 앞자리</label><input type="text" id="wr-ad-st" name="wr-ad-st-name" class="b-input" /><span>-</span><label for="wr-ad-end">우편번호 뒷자리</label><input type="text" id="wr-ad-end" name="wr-ad-end-name" class="b-input" />
+                                        </div>
+                                        <button type="button">주소검색</button>
+                                    </div>
+                                    <label for="wr-ad-detail">상세주소</label><input type="text" id="wr-ad-st" name="wr-ad-st-name" class="b-input" />
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">전화번호</th>
+                            <td  colspan="3">
+                                <div class="b-tel-box">
+                                    <label for="wr-tel-st">전화번호 앞자리</label><input type="text" id="wr-tel-st" name="wr-tel-st-name" class="b-input" /><span>-</span><label for="wr-tel-mid">전화번호 중간자리</label><input type="text" id="wr-tel-mid" name="wr-tel-mid-name" class="b-input" /><span>-</span><label for="wr-tel-end">전화번호 뒷자리</label><input type="text" id="wr-tel-end" name="wr-tel-end-name" class="b-input" />
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">성별</th>
+                            <td  colspan="3">
+                                <div class="b-gender-box">
+                                    <input type="radio" id="wr-gender01" name="wr-gender" class="b-radio" /><label for="wr-gender01">남</label>
+                                    <input type="radio" id="wr-gender02" name="wr-gender" class="b-radio" /><label for="wr-gender02">여</label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">관계</th>
+                            <td  colspan="3">
+                                <div class="b-relation-box">
+                                    <div>
+                                        <input type="checkbox" id="wr-relation01" name="wr-relation" class="b-chk" /><label for="wr-relation01">동료</label>
+                                        <input type="checkbox" id="wr-relation02" name="wr-relation" class="b-chk" /><label for="wr-relation02">교수</label>
+                                        <input type="checkbox" id="wr-relation03" name="wr-relation" class="b-chk" /><label for="wr-relation03">교직원</label>
+                                    </div>
+                                    <div>
+                                        <label for="wr-relation-etc">기타</label><input type="text" id="wr-relation-etc" name="wr-relation-etc" class="b-input" />
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="wr-url">유튜브</label></th>
+                            <td  colspan="3">
+                                <div class="b-url-box">
+                                    <input type="text" id="wr-url" name="wr-url-name" class="b-input" placeholder="동영상 고유 ID값 입력" />
+                                    <p>
+                                        Ex) https://www.youtube.com/watch?v=<span>abcdefg</span><br />
+                                        빨간색 동영상 고유코드만 넣어주세요
+                                    </p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="wr-con">내용</label></th>
+                            <td  colspan="3">
+                                <textarea id="wr-con" name="wr-con-name" class="b-input b-textarea"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">첨부</th>
+                            <td  colspan="3">
+                                <div class="b-file-box itype01">
+                                    <div class="b-left-box">
+                                        <div class="b-sel-box">
+                                            <a href="#a" class="b-sel-title" title="1">1</a>
+                                            <ul>
+                                                <li><a href="#a" title="1">1</a></li>
+                                                <li><a href="#a" title="2">2</a></li>
+                                                <li><a href="#a" title="3">3</a></li>
+                                            </ul>
+                                        </div>
+                                        <p class="b-guide-txt">
+                                            파일 개수를 지정해 주십시오.
+                                        </p>
+                                    </div>
+                                    <div class="b-right-box">
+                                        <p class="b-guide-txt">[업로드 가능 총 파일 크기 : 10M]</p>
+                                    </div>
+                                </div>
+                                <div class="b-file-box itype02">
+                                    <div class="b-left-box">
+                                        <label for="wr-file" class="b-guide-txt">첨부<span>1</span></label>
+                                        <button type="button" class="b-file-btn">파일선택</button>
+                                        <input type="text" id="wr-file" name="wr-file-name" class="b-file-status" disabled="disabled" value="선택된 파일 없음">
+                                        <button type="button" class="b-add-btn">추가</button>
+                                    </div>
+                                    <div class="b-right-box">
+                                        <label for="wr-txt" class="b-guide-txt">대체텍스트</label>
+                                        <input type="text" id="wr-txt" name="wr-txt-name" class="b-input">
+                                    </div>
+                                </div>
+                                <div class="b-file-box itype03">
+                                    <div>
+                                        <input type="text" id="wr-file" name="wr-file-name" class="b-input">
+                                        <button type="button" class="b-file-btn">찾아보기</button>
+                                        <button type="button" class="b-add-btn">추가</button>
+                                    </div>
+                                    <div>
+                                        <ul>
+                                            <li><span>첨부파일01.jpg</span><a href="#a" title="삭제">삭제</a></li>
+                                            <li><span>첨부파일02.jpg</span><a href="#a" title="삭제">삭제</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </fieldset>
+        </form>
+    </div>
+    
+    <div class="backbutton">
+		<ul class="btn-wrap">	
+			<li><a href="../../index.html">목록으로 돌아가기</a></li>              
+		</ul>
+	</div>
+</body>

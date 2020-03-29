@@ -1,0 +1,494 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>무제 문서</title>
+	<link rel="stylesheet" type="text/css" href="css/faq.css"/>
+	<link rel="stylesheet" href="../css/common.css" type="text/css"/>
+	<link rel="stylesheet" href="../css/reset.css" type="text/css"/>
+	<script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+	<script>
+	$(document).ready(function(){		
+		$('#stype').change(function() {
+			var state = $('#stype option:selected').val();
+			if ( state == 'vtype01' ) {
+				$(".type01").css("display","block");
+				$(".type02").css("display","none");
+				$(".type03").css("display","none");
+				$(".type04").css("display","none");
+			} else if(state == 'vtype02'){
+				$(".type01").css("display","none");
+				$(".type02").css("display","block");
+				$(".type03").css("display","none");
+				$(".type04").css("display","none");
+			} else if(state == 'vtype03'){
+				$(".type01").css("display","none");
+				$(".type02").css("display","none");
+				$(".type03").css("display","block");
+				$(".type04").css("display","none");
+            } else{
+				$(".type01").css("display","none");
+				$(".type02").css("display","none");
+				$(".type03").css("display","none");
+				$(".type04").css("display","block");
+            }
+        });
+        faqListToggle01(); //slideDown FAQ(아코디언 형식 아님)
+        function faqListToggle01() {
+            $(".b-title-box").find("a").click(function () {
+                if ($(this).parents("li").find(".b-ans-box").is(":hidden")) {
+                    $(this).parents("li").find(".b-ans-box").slideDown(100);
+                    $(this).parents(".b-quest-box").addClass("faq-close");
+                } else if ($(this).parents("li").find(".b-ans-box").is(":visible")) {
+                    $(this).parents("li").find(".b-ans-box").slideUp(100);
+                    $(this).parents(".b-quest-box").removeClass("faq-close");
+                }
+            });
+        }
+	});
+	</script>
+</head>
+
+<body>
+
+	<div class="stypediv">
+		<h1>FAQ 게시판 목록 Part</h1>
+		타입을 선택해주세요
+		<select name="stype" id="stype">
+		  <option value="vtype01" selected="selected">Type01</option>
+		  <option value="vtype02">Type02</option>
+		  <option value="vtype03">Type03</option>
+		  <option value="vtype04">Type04</option>
+		</select>
+    </div>
+
+    <div class="type01">
+        <div class="adm-chk">
+          <span class="chk-toggle">
+            <input id="adm-chk" type="checkbox"></span>
+          <label for="adm-chk">전체 선택/비선택</label>
+        </div>
+        <ul>
+          <li>
+            <span class="article-chk">
+              <input type="checkbox">
+            </span>
+            <div class="b-quest-box">
+              <span>카테고리</span>
+              <span>04</span>
+              <span>Q</span>
+              <span><img src="img/img-question.png" alt="question"></span>
+              <p class="b-title-box">
+                <a href="#a">FAQ 질문</a>
+              </p>
+              <div>
+                <button type="button">수정</button>
+              </div>
+            </div>
+            <div class="b-ans-box">
+              <div>
+                <span>A</span>
+                <span><img src="img/img-answer.png" alt="question"></span>
+                <p>faq 답변</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <span class="article-chk">
+              <input type="checkbox">
+            </span>
+            <div class="b-quest-box">
+              <span>카테고리</span>
+              <span>03</span>
+              <span>Q</span>
+              <span><img src="img/img-question.png" alt="question"></span>
+              <p class="b-title-box">
+                <a href="#a">FAQ 질문</a>
+              </p>
+              <div>
+                <button type="button">수정</button>
+              </div>
+            </div>
+            <div class="b-ans-box">
+              <div>
+                <span>A</span>
+                <span><img src="img/img-answer.png" alt="question"></span>
+                <p>faq 답변</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <span class="article-chk">
+              <input type="checkbox">
+            </span>
+            <div class="b-quest-box">
+              <span>카테고리</span>
+              <span>02</span>
+              <span>Q</span>
+              <span><img src="img/img-question.png" alt="question"></span>
+              <p class="b-title-box">
+                <a href="#a">FAQ 질문</a>
+              </p>
+              <div>
+                <button type="button">수정</button>
+              </div>
+            </div>
+            <div class="b-ans-box">
+              <div>
+                <span>A</span>
+                <span><img src="img/img-answer.png" alt="question"></span>
+                <p>faq 답변</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <span class="article-chk">
+              <input type="checkbox">
+            </span>
+            <div class="b-quest-box">
+              <span>카테고리</span>
+              <span>01</span>
+              <span>Q</span>
+              <span><img src="img/img-question.png" alt="question"></span>
+              <p class="b-title-box">
+                <a href="#a">FAQ 질문</a>
+              </p>
+              <div>
+                <button type="button">수정</button>
+              </div>
+            </div>
+            <div class="b-ans-box">
+              <div>
+                <span>A</span>
+                <span><img src="img/img-answer.png" alt="question"></span>
+                <p>faq 답변</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    <div class="type02">
+        <div class="adm-chk">
+          <span class="chk-toggle">
+            <input id="adm-chk" type="checkbox"></span>
+          <label for="adm-chk">전체 선택/비선택</label>
+        </div>
+        <ul>
+          <li>
+            <span class="article-chk">
+              <input type="checkbox">
+            </span>
+            <div class="b-quest-box">
+              <span>카테고리</span>
+              <span>04</span>
+              <span>Q</span>
+              <span><img src="img/img-question.png" alt="question"></span>
+              <p class="b-title-box">
+                <a href="#a">FAQ 질문</a>
+              </p>
+              <div>
+                <button type="button">수정</button>
+              </div>
+            </div>
+            <div class="b-ans-box">
+              <div>
+                <span>A</span>
+                <span><img src="img/img-answer.png" alt="question"></span>
+                <p>faq 답변</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <span class="article-chk">
+              <input type="checkbox">
+            </span>
+            <div class="b-quest-box">
+              <span>카테고리</span>
+              <span>03</span>
+              <span>Q</span>
+              <span><img src="img/img-question.png" alt="question"></span>
+              <p class="b-title-box">
+                <a href="#a">FAQ 질문</a>
+              </p>
+              <div>
+                <button type="button">수정</button>
+              </div>
+            </div>
+            <div class="b-ans-box">
+              <div>
+                <span>A</span>
+                <span><img src="img/img-answer.png" alt="question"></span>
+                <p>faq 답변</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <span class="article-chk">
+              <input type="checkbox">
+            </span>
+            <div class="b-quest-box">
+              <span>카테고리</span>
+              <span>02</span>
+              <span>Q</span>
+              <span><img src="img/img-question.png" alt="question"></span>
+              <p class="b-title-box">
+                <a href="#a">FAQ 질문</a>
+              </p>
+              <div>
+                <button type="button">수정</button>
+              </div>
+            </div>
+            <div class="b-ans-box">
+              <div>
+                <span>A</span>
+                <span><img src="img/img-answer.png" alt="question"></span>
+                <p>faq 답변</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <span class="article-chk">
+              <input type="checkbox">
+            </span>
+            <div class="b-quest-box">
+              <span>카테고리</span>
+              <span>01</span>
+              <span>Q</span>
+              <span><img src="img/img-question.png" alt="question"></span>
+              <p class="b-title-box">
+                <a href="#a">FAQ 질문</a>
+              </p>
+              <div>
+                <button type="button">수정</button>
+              </div>
+            </div>
+            <div class="b-ans-box">
+              <div>
+                <span>A</span>
+                <span><img src="img/img-answer.png" alt="question"></span>
+                <p>faq 답변</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    <div class="type03">
+        <div class="adm-chk">
+          <span class="chk-toggle">
+            <input id="adm-chk" type="checkbox"></span>
+          <label for="adm-chk">전체 선택/비선택</label>
+        </div>
+        <ul>
+          <li>
+            <span class="article-chk">
+              <input type="checkbox">
+            </span>
+            <div class="b-quest-box">
+              <span>카테고리</span>
+              <span>04</span>
+              <span>Q</span>
+              <span><img src="img/img-question.png" alt="question"></span>
+              <p class="b-title-box">
+                <a href="#a">FAQ 질문</a>
+              </p>
+              <div>
+                <button type="button">수정</button>
+              </div>
+            </div>
+            <div class="b-ans-box">
+              <div>
+                <span>A</span>
+                <span><img src="img/img-answer.png" alt="question"></span>
+                <p>faq 답변</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <span class="article-chk">
+              <input type="checkbox">
+            </span>
+            <div class="b-quest-box">
+              <span>카테고리</span>
+              <span>03</span>
+              <span>Q</span>
+              <span><img src="img/img-question.png" alt="question"></span>
+              <p class="b-title-box">
+                <a href="#a">FAQ 질문</a>
+              </p>
+              <div>
+                <button type="button">수정</button>
+              </div>
+            </div>
+            <div class="b-ans-box">
+              <div>
+                <span>A</span>
+                <span><img src="img/img-answer.png" alt="question"></span>
+                <p>faq 답변</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <span class="article-chk">
+              <input type="checkbox">
+            </span>
+            <div class="b-quest-box">
+              <span>카테고리</span>
+              <span>02</span>
+              <span>Q</span>
+              <span><img src="img/img-question.png" alt="question"></span>
+              <p class="b-title-box">
+                <a href="#a">FAQ 질문</a>
+              </p>
+              <div>
+                <button type="button">수정</button>
+              </div>
+            </div>
+            <div class="b-ans-box">
+              <div>
+                <span>A</span>
+                <span><img src="img/img-answer.png" alt="question"></span>
+                <p>faq 답변</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <span class="article-chk">
+              <input type="checkbox">
+            </span>
+            <div class="b-quest-box">
+              <span>카테고리</span>
+              <span>01</span>
+              <span>Q</span>
+              <span><img src="img/img-question.png" alt="question"></span>
+              <p class="b-title-box">
+                <a href="#a">FAQ 질문</a>
+              </p>
+              <div>
+                <button type="button">수정</button>
+              </div>
+            </div>
+            <div class="b-ans-box">
+              <div>
+                <span>A</span>
+                <span><img src="img/img-answer.png" alt="question"></span>
+                <p>faq 답변</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    <div class="type04">
+        <div class="adm-chk">
+          <span class="chk-toggle">
+            <input id="adm-chk" type="checkbox"></span>
+          <label for="adm-chk">전체 선택/비선택</label>
+        </div>
+        <ul>
+          <li>
+            <span class="article-chk">
+              <input type="checkbox">
+            </span>
+            <div class="b-quest-box">
+              <span>카테고리</span>
+              <span>04</span>
+              <span>Q</span>
+              <span><img src="img/img-question.png" alt="question"></span>
+              <p class="b-title-box">
+                <a href="#a">FAQ 질문</a>
+              </p>
+              <div>
+                <button type="button">수정</button>
+              </div>
+            </div>
+            <div class="b-ans-box">
+              <div>
+                <span>A</span>
+                <span><img src="img/img-answer.png" alt="question"></span>
+                <p>faq 답변</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <span class="article-chk">
+              <input type="checkbox">
+            </span>
+            <div class="b-quest-box">
+              <span>카테고리</span>
+              <span>03</span>
+              <span>Q</span>
+              <span><img src="img/img-question.png" alt="question"></span>
+              <p class="b-title-box">
+                <a href="#a">FAQ 질문</a>
+              </p>
+              <div>
+                <button type="button">수정</button>
+              </div>
+            </div>
+            <div class="b-ans-box">
+              <div>
+                <span>A</span>
+                <span><img src="img/img-answer.png" alt="question"></span>
+                <p>faq 답변</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <span class="article-chk">
+              <input type="checkbox">
+            </span>
+            <div class="b-quest-box">
+              <span>카테고리</span>
+              <span>02</span>
+              <span>Q</span>
+              <span><img src="img/img-question.png" alt="question"></span>
+              <p class="b-title-box">
+                <a href="#a">FAQ 질문</a>
+              </p>
+              <div>
+                <button type="button">수정</button>
+              </div>
+            </div>
+            <div class="b-ans-box">
+              <div>
+                <span>A</span>
+                <span><img src="img/img-answer.png" alt="question"></span>
+                <p>faq 답변</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <span class="article-chk">
+              <input type="checkbox">
+            </span>
+            <div class="b-quest-box">
+              <span>카테고리</span>
+              <span>01</span>
+              <span>Q</span>
+              <span><img src="img/img-question.png" alt="question"></span>
+              <p class="b-title-box">
+                <a href="#a">FAQ 질문</a>
+              </p>
+              <div>
+                <button type="button">수정</button>
+              </div>
+            </div>
+            <div class="b-ans-box">
+              <div>
+                <span>A</span>
+                <span><img src="img/img-answer.png" alt="question"></span>
+                <p>faq 답변</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="backbutton">
+        <ul class="btn-wrap">	
+          <li><a href="../../index.html">목록으로 돌아가기</a></li>              
+        </ul>
+      </div>
+</body>

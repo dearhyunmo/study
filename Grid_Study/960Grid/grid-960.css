@@ -1,0 +1,135 @@
+@charset "utf-8";
+
+html {
+	font-size: 1rem;
+	line-height: 1.5;
+	font-family: 'Spoqa Han Sans', sans-serif;
+	font-weight: 400;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    -webkit-text-size-adjust: 100%
+}
+*,:after,:before {
+    box-sizing: inherit
+}
+:after,:before {
+    text-decoration: inherit;
+    vertical-align: inherit
+}
+* {
+    background-repeat: no-repeat;
+    padding: 0;
+    margin: 0
+}
+
+body {
+	background: #2ecc71;
+}
+
+.btn-wrap{
+	margin:0px 50px 20px 0px;
+	text-align:right;
+	color: #fff;
+	list-style: none;}
+
+.btn-wrap a{
+	text-decoration: none;
+	padding: 10px;
+	background: #000;
+	border-radius: 5px;
+	}
+.btn-wrap a:visited{
+	color:#fff;
+}
+
+/* 가이드라인 */
+
+.overlay-grid {
+	position: relative;
+}
+
+.overlay-grid:hover::after {
+	content: '';
+	display: block;
+	width: 960px;
+	min-height: 100%;
+	background-image: linear-gradient(to right, transparent 20%, rgba(52,73,94,0.3) 20%, rgba(52,73,94,0.3) 80%, transparent 80%), linear-gradient(180deg, transparent 97%, #2c3e50 97%);
+	background-size: 80px 1px, 1px 24px;
+	background-repeat: repeat;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+
+/* 화면 폭 지정 및 가운데 배치 모듈 */
+
+.container {
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 3rem 0;
+}
+
+
+/* ROW Module | 행을 잡아주는 클래스 */
+
+.row:after, .row::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.row {
+	margin-bottom: 1.5rem;
+}
+
+
+/* COLUMN Module | 열을 만들어주는 클래스 */
+
+[class*="col-"] {
+	float: left;
+	margin-left: 16px;
+	margin-right: 16px;
+}
+
+.temp {
+	padding: 1.5rem 0;
+	text-align: center;
+	color: #fff;
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+	height: 4.5rem;
+	background: #121212;
+	border-radius: 5px;
+}
+
+.right{
+	float: right;
+}
+
+.col-1 { width: 48px; }
+.col-2 { width: 128px; }
+.col-3 { width: 208px; }
+.col-4 { width: 288px; }
+.col-5 { width: 368px; }
+.col-6 { width: 448px; }
+.col-7 { width: 528px; }
+.col-8 { width: 608px; }
+.col-9 { width: 688px; }
+.col-10 { width: 768px; }
+.col-11 { width: 848px; }
+.col-12 { width: 928px; }
+
+/* typography */
+
+h1 {
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+	font-size: 3.2rem;
+	line-height: 4.5rem;
+}
+
+p { font-weight: 200; margin-top: 1.5rem; margin-bottom: 3rem; }
+
+h1, p { text-align: center; color: #fff; }

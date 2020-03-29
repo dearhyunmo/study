@@ -1,0 +1,556 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>무제 문서</title>
+	<link rel="stylesheet" href="css/list.css" type="text/css"/>
+	<link rel="stylesheet" href="../css/common.css" type="text/css"/>
+	<link rel="stylesheet" href="../css/reset.css" type="text/css"/>
+	<script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+	<script>
+	$(document).ready(function(){		
+		$('#stype').change(function() {
+			var state = $('#stype option:selected').val();
+			if ( state == 'vtype01' ) {
+				$(".type01").css("display","block");
+				$(".type02").css("display","none");
+				$(".type03").css("display","none");
+				$(".type04").css("display","none");
+				$(".type05").css("display","none");
+			} else if(state == 'vtype02'){
+				$(".type01").css("display","none");
+				$(".type02").css("display","block");
+				$(".type03").css("display","none");
+				$(".type04").css("display","none");
+				$(".type05").css("display","none");
+			} else if(state == 'vtype03'){
+				$(".type01").css("display","none");
+				$(".type02").css("display","none");
+				$(".type03").css("display","block");
+				$(".type04").css("display","none");
+				$(".type05").css("display","none");
+			} else if(state == 'vtype04'){
+				$(".type01").css("display","none");
+				$(".type02").css("display","none");
+				$(".type03").css("display","none");
+				$(".type04").css("display","block");
+				$(".type05").css("display","none");
+			} else{
+				$(".type01").css("display","none");
+				$(".type02").css("display","none");
+				$(".type03").css("display","none");
+				$(".type04").css("display","none");
+				$(".type05").css("display","block");
+			} 
+		});
+	});
+	</script>
+</head>
+
+<body>
+
+	<div class="stypediv">
+		<h1>게시판 List Part</h1>
+		타입을 선택해주세요
+		<select name="stype" id="stype">
+		  <option value="vtype01" selected="selected">Type01</option>
+		  <option value="vtype02">Type02</option>
+		  <option value="vtype03">Type03</option>
+		  <option value="vtype04">Type04</option>
+		  <option value="vtype05">Type05</option>
+		</select>
+	</div>
+
+	<div class="type01">
+		<table summary="번호, 제목, 작성자, 등록일, 조회, 첨부파일로 구성된 공지사항을 보여주는 표">
+			<caption class="hide">공지사항</caption>
+			<colgroup>
+				<col class="b-col01">
+				<col class="b-col02">
+				<col class="b-col03">
+				<col class="b-col04">
+				<col class="b-col05">
+				<col class="b-col06">
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">NO.</th>
+					<th scope="col">제목</th>
+					<th scope="col">작성자</th>
+					<th scope="col">등록일</th>
+					<th scope="col">조회</th>
+					<th scope="col" class="b-no-right">파일</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="b-top-box">
+					<td class="b-num-box">공지</td>
+					<td class="b-td-left">
+						<div class="b-title-box">
+							<a href="#" title="자세히 보기"><span>[공지]</span> &lt;공지글&gt; 게시판 공지 테스트</a>
+							<div class="b-etc-box">
+								<p class="b-lock"><span>비밀글</span></p>
+								<p class="b-new"><span>NEW</span></p>
+							</div>
+							<div class="b-m-con">
+								<span class="b-writer">작성자</span><span class="b-date">2019-12-20</span>
+							</div>
+						</div>
+					</td>
+					<td>작성자</td>
+					<td>2019-12-20</td>
+					<td>
+						350                       
+					</td>
+					<td class="b-no-right">
+						<div class="b-file-box"><span class="hide">첨부파일</span></div>
+					</td>
+				</tr>
+				<tr>
+					<td class="b-num-box">36656</td>
+					<td class="b-td-left">
+						<div class="b-title-box">
+							<a href="#" title="자세히 보기">게시판 테스트</a>
+							<div class="b-etc-box">
+								<p class="b-new"><span>NEW</span></p>
+								<p class="b-file b-hwp"><span>한글</span></p>
+							</div>
+							<div class="b-m-con">
+								<span class="b-writer">작성자</span><span class="b-date">2019-12-15</span>
+							</div>
+						</div>
+					</td>
+					<td>작성자</td>
+					<td>2019-12-15</td>
+					<td>
+						200                     
+					</td>
+					<td class="b-no-right">
+
+					</td>
+				</tr>
+				<tr class="b-reply-box">
+					<td class="b-num-box"> </td>
+					<td class="b-td-left">
+						<div class="b-title-box">
+							<a href="#" title="자세히 보기">RE: 답글 테스트</a>
+							<div class="b-etc-box">
+								<p class="b-lock"><span>비밀글</span></p>
+								<p class="b-new"><span>NEW</span></p>
+								<p class="b-file b-xls"><span>xls</span></p>
+							</div>
+							<div class="b-m-con">
+								<span class="b-writer">작성자</span><span class="b-date">2019-12-20</span>
+							</div>
+						</div>
+					</td>
+					<td>작성자</td>
+					<td>2019-12-20</td>
+					<td>
+						280                     
+					</td>
+					<td class="b-no-right">
+						<div class="b-file-box"><span class="hide">첨부파일</span></div>
+					</td>
+				</tr>
+				<tr>
+					<td class="b-num-box">36655</td>
+					<td class="b-td-left">
+						<div class="b-title-box">
+							<a href="#" title="자세히 보기">게시판 테스트</a>
+							<div class="b-etc-box">
+								<p class="b-file b-pdf"><span>pdf</span></p>
+							</div>
+							<div class="b-m-con">
+								<span class="b-writer">작성자</span><span class="b-date">2019-12-01</span>
+							</div>
+						</div>
+					</td>
+					<td>작성자</td>
+					<td>2019-12-01</td>
+					<td>
+						30                    
+					</td>
+					<td class="b-no-right">
+						<div class="b-file-box"><span class="hide">첨부파일</span></div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+		
+	<div class="type02">
+		<table summary="번호, 제목, 작성자, 등록일, 조회, 첨부파일로 구성된 공지사항을 보여주는 표">
+			<caption class="hide">공지사항</caption>
+			<colgroup>
+				<col class="b-col01">
+				<col class="b-col02">
+				<col class="b-col03">
+				<col class="b-col04">
+				<col class="b-col05">
+				<col class="b-col06">
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">NO.</th>
+					<th scope="col">제목</th>
+					<th scope="col">작성자</th>
+					<th scope="col">등록일</th>
+					<th scope="col">조회</th>
+					<th scope="col" class="b-no-right">파일</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="b-top-box">
+					<td class="b-num-box">공지</td>
+					<td class="b-td-left">
+						<div class="b-title-box">
+							<a href="#" title="자세히 보기"><span>[공지]</span> &lt;공지글&gt; 게시판 공지 테스트</a>
+							<div class="b-etc-box">
+								<p class="b-lock"><span>비밀글</span></p>
+								<p class="b-new"><span>NEW</span></p>
+								<p class="b-file b-zip"><span>zip</span></p>
+							</div>
+							<div class="b-m-con">
+								<span class="b-writer">작성자</span><span class="b-date">2019-12-20</span>
+							</div>
+						</div>
+					</td>
+					<td>작성자</td>
+					<td>2019-12-20</td>
+					<td>
+						350                       
+					</td>
+					<td class="b-no-right">
+						<div class="b-file-box"><span class="hide">첨부파일</span></div>
+					</td>
+				</tr>
+				<tr>
+					<td class="b-num-box">36656</td>
+					<td class="b-td-left">
+						<div class="b-title-box">
+							<a href="#" title="자세히 보기">게시판 테스트</a>
+							<div class="b-etc-box">
+								<p class="b-new"><span>NEW</span></p>
+								<p class="b-file b-hwp"><span>한글</span></p>
+							</div>
+							<div class="b-m-con">
+								<span class="b-writer">작성자</span><span class="b-date">2019-12-15</span>
+							</div>
+						</div>
+					</td>
+					<td>작성자</td>
+					<td>2019-12-15</td>
+					<td>
+						200                     
+					</td>
+					<td class="b-no-right">
+
+					</td>
+				</tr>
+				<tr class="b-reply-box">
+					<td class="b-num-box"> </td>
+					<td class="b-td-left">
+						<div class="b-title-box">
+							<a href="#" title="자세히 보기">RE: 답글 테스트</a>
+							<div class="b-etc-box">
+								<p class="b-lock"><span>비밀글</span></p>
+								<p class="b-new"><span>NEW</span></p>
+								<p class="b-file b-xls"><span>xls</span></p>
+							</div>
+							<div class="b-m-con">
+								<span class="b-writer">작성자</span><span class="b-date">2019-12-20</span>
+							</div>
+						</div>
+					</td>
+					<td>작성자</td>
+					<td>2019-12-20</td>
+					<td>
+						280                     
+					</td>
+					<td class="b-no-right">
+						<div class="b-file-box"><span class="hide">첨부파일</span></div>
+					</td>
+				</tr>
+				<tr>
+					<td class="b-num-box">36655</td>
+					<td class="b-td-left">
+						<div class="b-title-box">
+							<a href="#" title="자세히 보기">게시판 테스트</a>
+							<div class="b-etc-box">
+								<p class="b-file b-pdf"><span>pdf</span></p>
+							</div>
+							<div class="b-m-con">
+								<span class="b-writer">작성자</span><span class="b-date">2019-12-01</span>
+							</div>
+						</div>
+					</td>
+					<td>작성자</td>
+					<td>2019-12-01</td>
+					<td>
+						30                    
+					</td>
+					<td class="b-no-right">
+						<div class="b-file-box"><span class="hide">첨부파일</span></div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	
+	<div class="type03">
+		<table summary="번호, 제목, 작성자, 등록일, 조회, 첨부파일로 구성된 공지사항을 보여주는 표">
+			<caption class="hide">공지사항</caption>
+			<colgroup>
+				<col class="b-col01">
+				<col class="b-col02">
+				<col class="b-col03">
+				<col class="b-col04">
+				<col class="b-col05">
+				<col class="b-col06">
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">NO.</th>
+					<th scope="col">제목</th>
+					<th scope="col">작성자</th>
+					<th scope="col">등록일</th>
+					<th scope="col">조회</th>
+					<th scope="col" class="b-no-right">파일</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="b-top-box">
+					<td class="b-num-box">공지</td>
+					<td class="b-td-left">
+						<div class="b-title-box">
+							<a href="#" title="자세히 보기"><span>[공지]</span> &lt;공지글&gt; 게시판 공지 테스트</a>
+							<div class="b-etc-box">
+								<p class="b-lock"><span>비밀글</span></p>
+								<p class="b-new"><span>NEW</span></p>
+								<p class="b-file b-zip"><span>zip</span></p>
+							</div>
+							<div class="b-m-con">
+								<span class="b-writer">작성자</span><span class="b-date">2019-12-20</span>
+							</div>
+						</div>
+					</td>
+					<td>작성자</td>
+					<td>2019-12-20</td>
+					<td>
+						350                       
+					</td>
+					<td class="b-no-right">
+						<div class="b-file-box"><span class="hide">첨부파일</span></div>
+					</td>
+				</tr>
+				<tr>
+					<td class="b-num-box">36656</td>
+					<td class="b-td-left">
+						<div class="b-title-box">
+							<a href="#" title="자세히 보기">게시판 테스트</a>
+							<div class="b-etc-box">
+								<p class="b-new"><span>NEW</span></p>
+								<p class="b-file b-hwp"><span>한글</span></p>
+							</div>
+							<div class="b-m-con">
+								<span class="b-writer">작성자</span><span class="b-date">2019-12-15</span>
+							</div>
+						</div>
+					</td>
+					<td>작성자</td>
+					<td>2019-12-15</td>
+					<td>
+						200                     
+					</td>
+					<td class="b-no-right">
+
+					</td>
+				</tr>
+				<tr class="b-reply-box">
+					<td class="b-num-box"> </td>
+					<td class="b-td-left">
+						<div class="b-title-box">
+							<a href="#" title="자세히 보기">RE: 답글 테스트</a>
+							<div class="b-etc-box">
+								<p class="b-lock"><span>비밀글</span></p>
+								<p class="b-new"><span>NEW</span></p>
+								<p class="b-file b-xls"><span>xls</span></p>
+							</div>
+							<div class="b-m-con">
+								<span class="b-writer">작성자</span><span class="b-date">2019-12-20</span>
+							</div>
+						</div>
+					</td>
+					<td>작성자</td>
+					<td>2019-12-20</td>
+					<td>
+						280                     
+					</td>
+					<td class="b-no-right">
+						<div class="b-file-box"><span class="hide">첨부파일</span></div>
+					</td>
+				</tr>
+				<tr>
+					<td class="b-num-box">36655</td>
+					<td class="b-td-left">
+						<div class="b-title-box">
+							<a href="#" title="자세히 보기">게시판 테스트</a>
+							<div class="b-etc-box">
+								<p class="b-file b-pdf"><span>pdf</span></p>
+							</div>
+							<div class="b-m-con">
+								<span class="b-writer">작성자</span><span class="b-date">2019-12-01</span>
+							</div>
+						</div>
+					</td>
+					<td>작성자</td>
+					<td>2019-12-01</td>
+					<td>
+						30                    
+					</td>
+					<td class="b-no-right">
+						<div class="b-file-box"><span class="hide">첨부파일</span></div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	
+	<div class="type04">
+		<div class="b-wrap">
+			<div>
+				<p>번호</p>
+				<p>제목</p>
+				<p>작성자</p>
+				<p>등록일</p>
+				<p>조회수</p>
+				<p>좋아요</p>
+				<p>첨부파일</p>
+			</div>
+			<div>
+				<div class="b-top-box">
+					<div class="b-num-box"><span>번호</span><span>공지</span></div>
+					<div class="b-title-box"><span>제목</span><span><a href="#" title="자세히 보기"><span class="b-cate">&#91;공지글&#93;</span> 게시판 공지 테스트</a></span>
+						<div class="b-etc-box">
+							<span class="b-lock">비밀글</span><span class="b-new">NEW</span>
+						</div>
+					</div>
+					<div class="b-writer-box"><span>작성자</span><span>작성자</span></div>
+					<div class="b-date-box"><span>등록일</span><span>2019-12-28</span></div>
+					<div class="b-hit-box"><span>조회수</span><span>507</span></div>
+					<div class="b-like-box"><span>좋아요</span><span>50</span></div>
+					<div class="b-file-box"><span>첨부파일</span><span>파일</span></div>
+				</div>
+				<div class="b-complete-box">
+					<div class="b-num-box"><span>번호</span><span>940</span></div>
+					<div class="b-title-box"><span>제목</span><span><a href="#" title="자세히 보기">게시판 테스트</a></span>
+						<div class="b-etc-box">
+							<span class="b-lock">비밀글</span>
+						</div>
+					</div>
+					<div class="b-writer-box"><span>작성자</span><span>작성자</span></div>
+					<div class="b-date-box"><span>등록일</span><span>2019-12-20</span></div>
+					<div class="b-hit-box"><span>조회수</span><span>108</span></div>
+					<div class="b-like-box"><span>좋아요</span><span>8</span></div>
+					<div class="b-file-box"><span>첨부파일</span><span>파일</span></div>
+				</div>
+				<div class="b-reply-box">
+					<div class="b-num-box"><span>번호</span><span>941</span></div>
+					<div class="b-title-box"><span>제목</span><span><a href="#" title="자세히 보기">RE : 답글 테스트</a></span>
+						<div class="b-etc-box">
+							<span class="b-lock">비밀글</span><span class="b-new">NEW</span>
+						</div>
+					</div>
+					<div class="b-writer-box"><span>작성자</span><span>작성자</span></div>
+					<div class="b-date-box"><span>등록일</span><span>2019-12-20</span></div>
+					<div class="b-hit-box"><span>조회수</span><span>3</span></div>
+					<div class="b-like-box"><span>좋아요</span><span>33</span></div>
+					<div class="b-file-box"><span>첨부파일</span><span>파일</span></div>
+				</div>
+				<div>
+					<div class="b-num-box"><span>번호</span><span>939</span></div>
+					<div class="b-title-box"><span>제목</span><span><a href="#" title="자세히 보기">게시판 테스트</a></span>
+					</div>
+					<div class="b-writer-box"><span>작성자</span><span>작성자</span></div>
+					<div class="b-date-box"><span>등록일</span><span>2019-10-18</span></div>
+					<div class="b-hit-box"><span>조회수</span><span>294</span></div>
+					<div class="b-like-box"><span>좋아요</span><span>20</span></div>
+					<div class="b-file-box"> </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="type05">
+		<div class="b-wrap">
+			<div>
+				<p>번호</p>
+				<p>제목</p>
+				<p>작성자</p>
+				<p>등록일</p>
+				<p>조회수</p>
+				<p>좋아요</p>
+				<p>첨부파일</p>
+			</div>
+			<div>
+				<div class="b-top-box">
+					<div class="b-num-box"><span>번호</span><span>공지</span></div>
+					<div class="b-title-box"><span>제목</span><span><a href="#" title="자세히 보기"><span class="b-cate">&#91;공지글&#93;</span> 게시판 공지 테스트</a></span>
+						<div class="b-etc-box">
+							<span class="b-lock">비밀글</span><span class="b-new">NEW</span>
+						</div>
+					</div>
+					<div class="b-writer-box"><span>작성자</span><span>작성자</span></div>
+					<div class="b-date-box"><span>등록일</span><span>2019-12-28</span></div>
+					<div class="b-hit-box"><span>조회수</span><span>507</span></div>
+					<div class="b-like-box"><span>좋아요</span><span>50</span></div>
+					<div class="b-file-box"><span>첨부파일</span><span>파일</span></div>
+				</div>
+				<div class="b-complete-box">
+					<div class="b-num-box"><span>번호</span><span>940</span></div>
+					<div class="b-title-box"><span>제목</span><span><a href="#" title="자세히 보기"> 게시판 테스트</a></span>
+						<div class="b-etc-box">
+							<span class="b-lock">비밀글</span>
+						</div>
+					</div>
+					<div class="b-writer-box"><span>작성자</span><span>작성자</span></div>
+					<div class="b-date-box"><span>등록일</span><span>2019-12-20</span></div>
+					<div class="b-hit-box"><span>조회수</span><span>108</span></div>
+					<div class="b-like-box"><span>좋아요</span><span>8</span></div>
+					<div class="b-file-box"><span>첨부파일</span><span>파일</span></div>
+				</div>
+				<div class="b-reply-box">
+					<div class="b-num-box"><span>번호</span><span>941</span></div>
+					<div class="b-title-box"><span>제목</span><span><a href="#" title="자세히 보기">RE : 답글 테스트</a></span>
+						<div class="b-etc-box">
+							<span class="b-lock">비밀글</span><span class="b-new">NEW</span>
+						</div>
+					</div>
+					<div class="b-writer-box"><span>작성자</span><span>작성자</span></div>
+					<div class="b-date-box"><span>등록일</span><span>2019-12-20</span></div>
+					<div class="b-hit-box"><span>조회수</span><span>3</span></div>
+					<div class="b-like-box"><span>좋아요</span><span>33</span></div>
+					<div class="b-file-box"><span>첨부파일</span><span>파일</span></div>
+				</div>
+				<div>
+					<div class="b-num-box"><span>번호</span><span>939</span></div>
+					<div class="b-title-box"><span>제목</span><span><a href="#" title="자세히 보기">게시판 테스트</a></span>
+					</div>
+					<div class="b-writer-box"><span>작성자</span><span>작성자</span></div>
+					<div class="b-date-box"><span>등록일</span><span>2019-10-18</span></div>
+					<div class="b-hit-box"><span>조회수</span><span>294</span></div>
+					<div class="b-like-box"><span>좋아요</span><span>20</span></div>
+					<div class="b-file-box"> </div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="backbutton">
+		<ul class="btn-wrap">	
+			<li><a href="../../index.html">목록으로 돌아가기</a></li>              
+		</ul>
+	</div>
+</body>
+</html>

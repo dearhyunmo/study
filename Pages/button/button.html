@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>무제 문서</title>
+	<link rel="stylesheet" href="css/button.css" type="text/css"/>
+	<link rel="stylesheet" href="../css/common.css" type="text/css"/>
+	<link rel="stylesheet" href="../css/reset.css" type="text/css"/>
+	<script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+	<script>
+	$(document).ready(function(){		
+		$('#stype').change(function() {
+			var state = $('#stype option:selected').val();
+			if ( state == 'vtype01' ) {
+				$(".type01").css("display","block");
+				$(".type02").css("display","none");
+				$(".type03").css("display","none");
+				$(".type04").css("display","none");
+				$(".type05").css("display","none");
+			} else if(state == 'vtype02'){
+				$(".type01").css("display","none");
+				$(".type02").css("display","block");
+				$(".type03").css("display","none");
+				$(".type04").css("display","none");
+				$(".type05").css("display","none");
+			} else if(state == 'vtype03'){
+				$(".type01").css("display","none");
+				$(".type02").css("display","none");
+				$(".type03").css("display","block");
+				$(".type04").css("display","none");
+				$(".type05").css("display","none");
+			} else if(state == 'vtype04'){
+				$(".type01").css("display","none");
+				$(".type02").css("display","none");
+				$(".type03").css("display","none");
+				$(".type04").css("display","block");
+				$(".type05").css("display","none");
+			} else{
+				$(".type01").css("display","none");
+				$(".type02").css("display","none");
+				$(".type03").css("display","none");
+				$(".type04").css("display","none");
+				$(".type05").css("display","block");
+			} 
+		});
+	});
+	</script>
+</head>
+
+<body>
+
+	
+	<div class="stypediv">
+		<h1>게시판 버튼 Part</h1>
+		타입을 선택해주세요
+		<select name="stype" id="stype">
+		  <option value="vtype01" selected="selected">Type01</option>
+		  <option value="vtype02">Type02</option>
+		  <option value="vtype03">Type03</option>
+		  <option value="vtype04">Type04</option>
+		  <option value="vtype05">Type05</option>
+		</select>
+	</div>
+
+
+	<div class="type01">
+		<fieldset class="b-search-wrap">
+			<legend class="hide">버튼 type1</legend>
+			<div class="b-btn01 type01">
+				<ul class="btn-wrap">	
+				<li><a data-value="" data-confirm="" href="">영구삭제</a></li>
+				<li><a data-value="" data-confirm="" href="">삭제</a></li>
+				<li><a data-value="" data-confirm="" href="">복구</a></li>
+				<li><a class="active" href="">등록</a></li>                  
+			</ul>
+			</div>
+		</fieldset>
+	</div>
+	
+	<div class="type02">
+		<fieldset class="b-search-wrap">
+			<legend class="hide">버튼 type2</legend>
+			<div class="b-btn01 type02">
+				<ul class="btn-wrap">	
+				<li><a data-value="" data-confirm="" href="">영구삭제</a></li>
+				<li><a data-value="" data-confirm="" href="">삭제</a></li>
+				<li><a data-value="" data-confirm="" href="">복구</a></li>
+				<li><a class="active" href="">등록</a></li>                  
+			</ul>
+			</div>
+			</div>
+		</fieldset>
+	</div>
+	
+	<div class="type03">
+		<fieldset class="b-search-wrap">
+			<legend class="hide">버튼 type3</legend>
+			<div class="b-btn01 type03">
+				<ul class="btn-wrap">	
+				<li><a data-value="" data-confirm="" href="">영구삭제</a></li>
+				<li><a data-value="" data-confirm="" href="">삭제</a></li>
+				<li><a data-value="" data-confirm="" href="">복구</a></li>
+				<li><a class="active" href="">등록</a></li>                  
+			</ul>
+			</div>
+			</div>
+		</fieldset>
+	</div>
+	
+	<div class="type04">
+		<fieldset class="b-search-wrap">
+			<legend class="hide">버튼 type4</legend>
+			<div class="b-btn01 type04">
+				<ul class="btn-wrap">	
+				<li><a data-value="" data-confirm="" href="">영구삭제</a></li>
+				<li><a data-value="" data-confirm="" href="">삭제</a></li>
+				<li><a data-value="" data-confirm="" href="">복구</a></li>
+				<li><a class="active" href="">등록</a></li>                  
+			</ul>
+			</div>
+			</div>
+		</fieldset>
+	</div>
+	
+	<div class="type05">
+		<fieldset class="b-search-wrap">
+			<legend class="hide">버튼 type5</legend>
+			<div class="b-btn01 type05">
+				<ul class="btn-wrap">	
+				<li><a data-value="" data-confirm="" href="">영구삭제</a></li>
+				<li><a data-value="" data-confirm="" href="">삭제</a></li>
+				<li><a data-value="" data-confirm="" href="">복구</a></li>
+				<li><a class="active" href="">등록</a></li>                  
+			</ul>
+			</div>
+			</div>
+		</fieldset>
+	</div>
+
+	<div class="backbutton">
+		<ul class="btn-wrap">	
+			<li><a href="../../index.html">목록으로 돌아가기</a></li>              
+		</ul>
+	</div>
+
+</body>
+</html>

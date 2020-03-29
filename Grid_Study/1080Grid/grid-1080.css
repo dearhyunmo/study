@@ -1,0 +1,115 @@
+@charset "utf-8";
+
+/* default settings */
+
+html {
+	font-family: 'Spoqa Han Sans', sans-serif;
+	font-size: 100%;
+	line-height: 1.5;
+	color: #fff;
+	box-sizing: border-box;
+    overflow-y: scroll;
+    -webkit-text-size-adjust: 100%
+}
+*,:after,:before {
+    box-sizing: inherit
+}
+:after,:before {
+    text-decoration: inherit;
+    vertical-align: inherit
+}
+* {
+    background-repeat: no-repeat;
+    padding: 0;
+    margin: 0
+}
+
+body { background: #339BE6;}
+
+.btn-wrap{
+	margin:0px 50px 20px 0px;
+	text-align:right;
+	color: #fff;
+	list-style: none;}
+
+.btn-wrap a{
+	text-decoration: none;
+	padding: 10px;
+	background: #000;
+	border-radius: 5px;
+	}
+.btn-wrap a:visited{
+	color:#fff;
+}
+	
+
+
+/* guideline design */
+.overlay-guide { position: relative; }
+.overlay-guide:hover:after, .overlay-guide:hover::after {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-image: linear-gradient(180deg, transparent 97%, #2c3e50 97%), linear-gradient(to right, transparent 10%, rgba(52,73,94,0.3) 10%, rgba(52,73,94,0.3) 90%, transparent 90%);
+	background-size: 1px 1.5rem, 90px 1px;
+}
+
+/* grid system design */
+
+.container {
+	width: 1080px;
+	padding: 3rem 0;
+	margin: 0 auto;
+}
+
+.row:after, .row::after {
+	content: '';
+	display: block;
+	clear: both;
+	margin-bottom: 1.5rem;
+}
+
+[class^="col-"] {
+	float: left;
+	margin-left: 9px;
+	margin-right: 9px;
+}
+
+.col-1 { width: 72px; }
+.col-2 { width: 162px; }
+.col-3 { width: 252px; }
+.col-4 { width: 342px; }
+.col-5 { width: 432px; }
+.col-6 { width: 522px; }
+.col-7 { width: 612px; }
+.col-8 { width: 702px; }
+.col-9 { width: 792px; }
+.col-10 { width: 882px; }
+.col-11 { width: 972px; }
+.col-11 { width: 1062px; }
+
+.temp {
+	border-radius: 5px;
+	padding: 1.5rem 0;
+	background: #121212;
+	font-weight: 700;
+	text-align: center;
+}
+
+
+/* typography */
+
+h1 {
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+	font-size: 3.2rem;
+	line-height: 4.5rem;
+}
+
+p { font-weight: 200; margin-top: 1.5rem; margin-bottom: 3rem; }
+
+h1, p { text-align: center; }

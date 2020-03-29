@@ -1,0 +1,321 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>카테고리_검색</title>
+	<link rel="stylesheet" href="../css/common.css" type="text/css"/>
+	<link rel="stylesheet" href="../css/reset.css" type="text/css"/>
+    <link href="css/type1.css" type="text/css" rel="stylesheet" />
+	<script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		$box = $(".b-sel-title");  
+		$box.click(function(){
+			$(this).next().toggleClass('on');          
+		});
+		
+		$('#stype').change(function() {
+			var state = $('#stype option:selected').val();
+			if ( state == 'vtype01' ) {
+				$(".type01").css("display","block");
+				$(".type02").css("display","none");
+				$(".type03").css("display","none");
+				$(".type04").css("display","none");
+				$(".type05").css("display","none");
+				$(".type06").css("display","none");
+			} else if(state == 'vtype02'){
+				$(".type01").css("display","none");
+				$(".type02").css("display","block");
+				$(".type03").css("display","none");
+				$(".type04").css("display","none");
+				$(".type05").css("display","none");
+				$(".type06").css("display","none");
+			} else if(state == 'vtype03'){
+				$(".type01").css("display","none");
+				$(".type02").css("display","none");
+				$(".type03").css("display","block");
+				$(".type04").css("display","none");
+				$(".type05").css("display","none");
+				$(".type06").css("display","none");
+			} else if(state == 'vtype04'){
+				$(".type01").css("display","none");
+				$(".type02").css("display","none");
+				$(".type03").css("display","none");
+				$(".type04").css("display","block");
+				$(".type05").css("display","none");
+				$(".type06").css("display","none");
+			} else if(state == 'vtype05'){
+				$(".type01").css("display","none");
+				$(".type02").css("display","none");
+				$(".type03").css("display","none");
+				$(".type04").css("display","none");
+				$(".type05").css("display","block");
+				$(".type06").css("display","none");
+			} else{
+				$(".type01").css("display","none");
+				$(".type02").css("display","none");
+				$(".type03").css("display","none");
+				$(".type04").css("display","none");
+				$(".type05").css("display","none");
+				$(".type06").css("display","block");
+			}
+		});
+		
+	});
+		
+	
+	</script>
+</head>
+
+<body>
+	<div class="stypediv">
+		<h1>게시판 검색 Part</h1>
+		타입을 선택해주세요
+		<select name="stype" id="stype">
+		  <option value="vtype01" selected="selected">Type01</option>
+		  <option value="vtype02">Type02</option>
+		  <option value="vtype03">Type03</option>
+		  <option value="vtype04">Type04</option>
+		  <option value="vtype05">Type05</option>
+		  <option value="vtype06">Type06</option>
+		</select>
+	</div>
+	
+	<div class="type01">
+	  <form method="get" action="">
+		  <fieldset class="b-search-wrap">
+			  <legend class="hide">게시글 검색</legend>
+			  <input type="hidden" name="mode" value="list">		
+			  <div class="b-sel-box b-cate01">
+				<label for="category1" class="b-sel-label"><span>1차분류선택</span></label>
+				  <input type="hidden" name="srCategoryId1" id="category1">
+				  <a href="#category1" class="b-sel-title">1차분류선택</a>
+				  <ul>
+					  <li><a href="#category1" title="1차분류선택">1차분류선택</a></li>
+					  <li><a href="#category1" class="sel-Opt" title="일반">일반</a></li>
+					  <li><a href="#category1" class="sel-Opt" title="사업">사업</a></li>
+					  <li><a href="#category1" class="sel-Opt" title="채용">채용</a></li>			
+					  <li><a href="#category1" class="sel-Opt" title="채용">공고</a></li>			
+				  </ul>
+			  </div>
+			  <div class="b-sel-box b-cate02">
+				  <label for="category2" class="b-sel-label"><span>2차분류선택</span></label>
+				  <input type="hidden" name="srCategoryId2" id="category2">
+				  <a href="#category2" class="b-sel-title">2차분류선택</a>
+				  <ul class="2dep-category">
+					  <li><a href="#category2" title="2차분류선택">2차분류선택</a></li>
+					  <li><a href="#category2" class="sel-Opt" title="2차분류선택">2차분류01</a></li>
+					  <li><a href="#category2" class="sel-Opt" title="2차분류선택">2차분류02</a></li>
+					  <li><a href="#category2" class="sel-Opt" title="2차분류선택">2차분류03</a></li>
+					  <li><a href="#category2" class="sel-Opt" title="2차분류선택">2차분류04</a></li>
+				   </ul>
+			  </div>
+			  <div class="b-sel-box b-cate-basic">
+				  <label for="search_key" class="b-sel-label"><span>검색분류선택</span></label>				
+				  <input type="hidden" name="srSearchKey" id="search_key">
+				  <a href="#search" class="b-sel-title">전체</a>
+				  <ul>
+					  <li><a href="#search" class="sel-Opt" title="전체" data-value="">전체</a></li>	
+					  <li><a href="#search" class="sel-Opt" title="제목" data-value="article_title">제목</a></li>			
+					  <li><a href="#search" class="sel-Opt" title="제목" data-value="article_title">내용</a></li>			
+					  <li><a href="#search" class="sel-Opt" title="제목" data-value="article_title">제목+내용</a></li>						
+					  <li><a href="#search" class="sel-Opt" title="내용" data-value="article_text">글쓴이</a></li>                    
+				  </ul>
+			   </div>				
+			  <label for="search_val" class="b-sel-label"><span>SEARCH</span></label>
+			  <input type="text" id="search_val" name="srSearchVal" value="" placeholder="검색어를 입력해 주세요">			
+			<button type="submit" class="b-sel-btn"><span>검색</span></button> 
+	  </fieldset>
+	  </form>
+	</div>
+	
+	
+	<div class="type02">
+	  <form method="get" action="">
+		  <fieldset class="b-search-wrap">
+			  <legend class="hide">게시글 검색</legend>
+			  <input type="hidden" name="mode" value="list">		
+			  <div class="b-sel-box b-cate01 close">
+				<label for="category1" class="b-sel-label"><span>1차분류선택</span></label>
+				  <input type="hidden" name="srCategoryId1" id="category1">
+				  <a href="#category1" class="b-sel-title">1차분류선택</a>
+				  <ul>
+					  <li><a href="#category1" title="1차분류선택">1차분류선택</a></li>
+					  <li><a href="#category1" class="sel-Opt" title="일반">일반</a></li>
+					  <li><a href="#category1" class="sel-Opt" title="사업">사업</a></li>
+					  <li><a href="#category1" class="sel-Opt" title="채용">채용</a></li>			
+					  <li><a href="#category1" class="sel-Opt" title="채용">공고</a></li>			
+				  </ul>
+			  </div>
+			  <div class="b-sel-box b-cate-basic">
+				  <label for="search_key" class="b-sel-label"><span>검색분류선택</span></label>				
+				  <input type="hidden" name="srSearchKey" id="search_key">
+				  <a href="#search" class="b-sel-title">전체</a>
+				  <ul>
+					  <li><a href="#search" class="sel-Opt" title="전체" data-value="">전체</a></li>	
+					  <li><a href="#search" class="sel-Opt" title="제목" data-value="article_title">제목</a></li>			
+					  <li><a href="#search" class="sel-Opt" title="제목" data-value="article_title">내용</a></li>			
+					  <li><a href="#search" class="sel-Opt" title="제목" data-value="article_title">제목+내용</a></li>						
+					  <li><a href="#search" class="sel-Opt" title="내용" data-value="article_text">글쓴이</a></li>                    
+				  </ul>
+			   </div>				
+			  <label for="search_val" class="b-sel-label"><span>SEARCH</span></label>
+			  <input type="text" id="search_val" name="srSearchVal" value="" placeholder="검색어를 입력해 주세요">			
+			<button type="submit" class="b-sel-btn"><span>검색</span></button> 
+	  </fieldset>
+	  </form>
+  	</div>
+	
+	<div class="type03">
+	  <form method="get" action="">
+		  <fieldset class="b-search-wrap">
+			  <legend class="hide">게시글 검색</legend>
+			  <input type="hidden" name="mode" value="list">		
+			  <div class="b-sel-box b-cate01">
+				<label for="category1" class="b-sel-label"><span>1차분류선택</span></label>
+				  <input type="hidden" name="srCategoryId1" id="category1">
+				  <a href="#category1" class="b-sel-title">1차분류선택</a>
+				  <ul>
+					  <li><a href="#category1" title="1차분류선택">1차분류선택</a></li>
+					  <li><a href="#category1" class="sel-Opt" title="일반">일반</a></li>
+					  <li><a href="#category1" class="sel-Opt" title="사업">사업</a></li>
+					  <li><a href="#category1" class="sel-Opt" title="채용">채용</a></li>			
+					  <li><a href="#category1" class="sel-Opt" title="채용">공고</a></li>			
+				  </ul>
+			  </div>
+			  <div class="b-sel-box b-cate-basic">
+				  <label for="search_key" class="b-sel-label"><span>검색분류선택</span></label>				
+				  <input type="hidden" name="srSearchKey" id="search_key">
+				  <a href="#search" class="b-sel-title">전체</a>
+				  <ul>
+					  <li><a href="#search" class="sel-Opt" title="전체" data-value="">전체</a></li>	
+					  <li><a href="#search" class="sel-Opt" title="제목" data-value="article_title">제목</a></li>			
+					  <li><a href="#search" class="sel-Opt" title="제목" data-value="article_title">내용</a></li>			
+					  <li><a href="#search" class="sel-Opt" title="제목" data-value="article_title">제목+내용</a></li>						
+					  <li><a href="#search" class="sel-Opt" title="내용" data-value="article_text">글쓴이</a></li>                    
+				  </ul>
+			   </div>				
+			  <label for="search_val" class="b-sel-label"><span>SEARCH</span></label>
+			  <input type="text" id="search_val" name="srSearchVal" value="" placeholder="검색어를 입력해 주세요">			
+			<button type="submit" class="b-sel-btn"><span>검색</span></button> 
+	  </fieldset>
+	  </form>
+  	</div>
+	
+	<div class="type04">
+	  <form method="get" action="">
+		  <fieldset class="b-search-wrap">
+			  <legend class="hide">게시글 검색</legend>
+			  <input type="hidden" name="mode" value="list">		
+			  <div class="b-sel-box b-cate01">
+				<label for="category1" class="b-sel-label"><span>1차분류선택</span></label>
+				  <input type="hidden" name="srCategoryId1" id="category1">
+				  <a href="#category1" class="b-sel-title">1차분류선택</a>
+				  <ul>
+					  <li><a href="#category1" title="1차분류선택">1차분류선택</a></li>
+					  <li><a href="#category1" class="sel-Opt" title="일반">일반</a></li>
+					  <li><a href="#category1" class="sel-Opt" title="사업">사업</a></li>
+					  <li><a href="#category1" class="sel-Opt" title="채용">채용</a></li>			
+					  <li><a href="#category1" class="sel-Opt" title="채용">공고</a></li>			
+				  </ul>
+			  </div>
+			  <div class="b-sel-box b-cate-basic">
+				  <label for="search_key" class="b-sel-label"><span>검색분류선택</span></label>				
+				  <input type="hidden" name="srSearchKey" id="search_key">
+				  <a href="#search" class="b-sel-title">전체</a>
+				  <ul>
+					  <li><a href="#search" class="sel-Opt" title="전체" data-value="">전체</a></li>	
+					  <li><a href="#search" class="sel-Opt" title="제목" data-value="article_title">제목</a></li>			
+					  <li><a href="#search" class="sel-Opt" title="제목" data-value="article_title">내용</a></li>			
+					  <li><a href="#search" class="sel-Opt" title="제목" data-value="article_title">제목+내용</a></li>						
+					  <li><a href="#search" class="sel-Opt" title="내용" data-value="article_text">글쓴이</a></li>                    
+				  </ul>
+			   </div>				
+			  <label for="search_val" class="b-sel-label"><span>SEARCH</span></label>
+			  <input type="text" id="search_val" name="srSearchVal" value="" placeholder="검색어를 입력해 주세요">			
+			<button type="submit" class="b-sel-btn"><span>검색</span></button> 
+	  </fieldset>
+	  </form>
+  	</div>
+	
+	<div class="type05">
+	  <form method="get" action="">
+		  <fieldset class="b-search-wrap">
+			  <legend class="hide">게시글 검색</legend>
+			  <input type="hidden" name="mode" value="list">		
+			  <div class="b-sel-box b-cate01">
+				<label for="category1" class="b-sel-label"><span>1차분류선택</span></label>
+				  <input type="hidden" name="srCategoryId1" id="category1">
+				  <a href="#category1" class="b-sel-title">1차분류선택</a>
+				  <ul>
+					  <li><a href="#category1" title="1차분류선택">1차분류선택</a></li>
+					  <li><a href="#category1" class="sel-Opt" title="일반">일반</a></li>
+					  <li><a href="#category1" class="sel-Opt" title="사업">사업</a></li>
+					  <li><a href="#category1" class="sel-Opt" title="채용">채용</a></li>			
+					  <li><a href="#category1" class="sel-Opt" title="채용">공고</a></li>			
+				  </ul>
+			  </div>
+			  
+			  <div class="b-sel-box b-cate-basic">
+				  <label for="search_key" class="b-sel-label"><span>검색분류선택</span></label>				
+				  <input type="hidden" name="srSearchKey" id="search_key">
+				  <a href="#search" class="b-sel-title">전체</a>
+				  <ul>
+					  <li><a href="#search" class="sel-Opt" title="전체" data-value="">전체</a></li>	
+					  <li><a href="#search" class="sel-Opt" title="제목" data-value="article_title">제목</a></li>			
+					  <li><a href="#search" class="sel-Opt" title="제목" data-value="article_title">내용</a></li>			
+					  <li><a href="#search" class="sel-Opt" title="제목" data-value="article_title">제목+내용</a></li>						
+					  <li><a href="#search" class="sel-Opt" title="내용" data-value="article_text">글쓴이</a></li>                    
+				  </ul>
+			   </div>				
+			  <label for="search_val" class="b-sel-label"><span>SEARCH</span></label>
+			  <input type="text" id="search_val" name="srSearchVal" value="" placeholder="검색어를 입력해 주세요">			
+			<button type="submit" class="b-sel-btn"><span>검색</span></button> 
+	  </fieldset>
+	  </form>
+  	</div>
+	
+	<div class="type06">
+	  <form method="get" action="">
+		  <fieldset class="b-search-wrap">
+			  <legend class="hide">게시글 검색</legend>
+			  <input type="hidden" name="mode" value="list">		
+			  <div class="b-sel-box b-cate01">
+				<label for="category1" class="b-sel-label"><span>1차분류선택</span></label>
+				  <input type="hidden" name="srCategoryId1" id="category1">
+				  <a href="#category1" class="b-sel-title">1차분류선택</a>
+				  <ul>
+					  <li><a href="#category1" title="1차분류선택">1차분류선택</a></li>
+					  <li><a href="#category1" class="sel-Opt" title="일반">일반</a></li>
+					  <li><a href="#category1" class="sel-Opt" title="사업">사업</a></li>
+					  <li><a href="#category1" class="sel-Opt" title="채용">채용</a></li>			
+					  <li><a href="#category1" class="sel-Opt" title="채용">공고</a></li>			
+				  </ul>
+			  </div>
+			  
+			  <div class="b-sel-box b-cate-basic">
+				  <label for="search_key" class="b-sel-label"><span>검색분류선택</span></label>				
+				  <input type="hidden" name="srSearchKey" id="search_key">
+				  <a href="#search" class="b-sel-title">전체</a>
+				  <ul>
+					  <li><a href="#search" class="sel-Opt" title="전체" data-value="">전체</a></li>	
+					  <li><a href="#search" class="sel-Opt" title="제목" data-value="article_title">제목</a></li>			
+					  <li><a href="#search" class="sel-Opt" title="제목" data-value="article_title">내용</a></li>			
+					  <li><a href="#search" class="sel-Opt" title="제목" data-value="article_title">제목+내용</a></li>						
+					  <li><a href="#search" class="sel-Opt" title="내용" data-value="article_text">글쓴이</a></li>                    
+				  </ul>
+			   </div>				
+			  <label for="search_val" class="b-sel-label"><span>SEARCH</span></label>
+			  <input type="text" id="search_val" name="srSearchVal" value="" placeholder="검색어를 입력해 주세요">			
+			<button type="submit" class="b-sel-btn"><span>검색</span></button> 
+	  </fieldset>
+	  </form>
+	  </div>
+	  
+	  <div class="backbutton">
+		<ul class="btn-wrap">	
+			<li><a href="../../index.html">목록으로 돌아가기</a></li>              
+		</ul>
+	</div>
+</body>
+</html>
